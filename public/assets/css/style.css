@@ -1,0 +1,159 @@
+.sign-box {
+    background-color: rgb(241, 241, 241);
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+.list-container {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.list li:before {
+    content: "✔";
+    color: rgb(255, 255, 255);
+    background-color: #a71e38;
+    position: absolute;
+    left: 0;
+    font-size: 10px;
+    font-weight : bold;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/* Toàn bộ giao diện */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Container bao quanh các card */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Card cơ bản */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 30px 20px 20px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Phần tròn phía trên */
+.card::before {
+  content: "";
+  width: 125%; /* Độ rộng hình tròn lớn hơn chiều rộng card */
+  height: 160%;
+  background-color: #ffa9b989;
+  position: absolute;
+  top: -135%; /* Đẩy hình tròn lên trên */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 0; /* Đảm bảo nó nằm dưới nội dung */
+}
+.card-outside {
+  width: 115px;
+  height: 115px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3; 
+  border: 2px dotted #a71e38;
+}
+/* Icon trong hình tròn */
+.card-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #ff3d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Để icon nằm trên hình tròn */
+}
+
+.card-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Tiêu đề */
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Nội dung */
+.card-content {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+/* Nút */
+.card-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #ff5555;
+  border: 1px solid #ff5555;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.card-button:hover {
+  background-color: #ff5555;
+  color: #fff;
+}
