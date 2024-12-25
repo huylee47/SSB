@@ -1,6 +1,5 @@
-@extends('client.layouts.master')
-@section('main')
-    
+@extends('master')
+@section('content')
 <div>
     <div class="banner-home overflow-hidden pt-lg-100 pt-md-90 pt-sm-80 pt-xs-70">
         <div class="container">
@@ -424,7 +423,7 @@
     <!-- why-choose end -->
     
     <!-- get-free end -->
-    <div class="get-free get-free-home overflow-hidden">
+    {{-- <div class="get-free get-free-home overflow-hidden">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -457,11 +456,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- get-free end -->
     
     <!-- work-process end -->
-    <div class="work-process work-process-home bg-dark_red pb-xs-80 pb-sm-100 pb-md-100 pb-120 overflow-hidden">
+    {{-- <div class="work-process work-process-home bg-dark_red pb-xs-80 pb-sm-100 pb-md-100 pb-120 overflow-hidden">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -566,11 +565,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- work-process end -->
     
     <!-- our-portfolio-home start -->
-    <div
+    {{-- <div
         class="our-portfolio-home pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
@@ -690,7 +689,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- our-portfolio-home end -->
     
     <!-- our-team-home-1 start -->
@@ -831,7 +830,7 @@
     <!-- our-team-home-1 end -->
     
     <!-- testimonial start -->
-    <div
+    {{-- <div
         class="testimonial test pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
@@ -1105,7 +1104,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- testimonial end -->
     
     <div class="can-help-overly-home overflow-hidden">

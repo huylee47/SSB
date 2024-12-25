@@ -254,7 +254,7 @@
 
     <!-- banner-home start -->
     {{-- main  --}}
-    @yield('main')
+    @yield('content')
     <!-- footer start -->
     <footer class="footer-1 footer-3 overflow-hidden"
         style="background-image: url(assets/img/footer/footer-bg-3.png);">
@@ -284,47 +284,34 @@
 
         <div class="container">
             <div class="row justify-content-between">
+                <a href="index.html" class="d-block mb-30 mb-xs-20">
+                    <img src="assets/img/logo/footer-logo-3.png" alt="" width="20%">
+                </a>
                 <div class="col-md-6 col-xl-3">
                     <div class="single-footer-wid widget-description">
-                        <a href="index.html" class="d-block mb-30 mb-xs-20">
-                            <img src="assets/img/logo/footer-logo-3.png" alt="">
-                        </a>
-
                         <div class="description font-la color-white mb-40 mb-sm-30 mb-xs-25">
                             <h4 class="wid-title mb-30 color-white">Địa chỉ</h4>
                             <span>
-                                <p>45 Đông Hồ , Phường 8 , Quận Tân Bình , Thanh Phố Hồ Chí Minh,Việt Nam</p>
-                                <li><a><i class="icon-phone"></i> +8437 378 1186</a></li>
-                                <li><a href="mailto:consulter@example.com"><i
-                                            class="icon-email"></i>info@ssb.edu.vn</a>
+                                <ul>
+                                <li>
+                                <p>45 Đông Hồ , Phường 8 , Quận Tân Bình , Thành Phố Hồ Chí Minh,Việt Nam</p>
+                                </li>
+                                <li><a><i class="icon-phone"></i> <span> +8437 378 1186</span>  </a></li>
+                                <li><a href="mailto:info@ssb.edu.vn"><i class="icon-email"></i> <span> info@ssb.edu.vn</span>  </a></li>
+                                <li><a class=""><i class="icon-home-location"> </i> <span>  1901</span> </a></li>
+                                </ul>            
                             </span>
                         </div>
 
-                        <a href="#" class="theme-btn btn-red btn-md fw-600">Purchase Now <i
-                                class="far fa-chevron-double-right"></i></a>
+                        {{-- <a href="#" class="theme-btn btn-red btn-md fw-600">Purchase Now <i
+                                class="far fa-chevron-double-right"></i></a> --}}
                     </div>
                 </div>
                 <!-- /.col-lg-3 - single-footer-wid -->
 
-                <div class="col-md-6 col-xl-2">
-                    <div class="single-footer-wid pl-xl-10 pl-50">
-                        <h4 class="wid-title mb-30 color-white">Quick Link</h4>
-
-                        <ul>
-                            <li><a href="about.html">About Company</a></li>
-                            <li><a href="services.html">Our Services</a></li>
-                            <li><a href="services-2.html">Investor Presentation</a></li>
-                            <li><a href="table.html">Investor Career</a></li>
-                            <li><a href="team.html">Meet Our Team</a></li>
-                            <li><a href="contact.html">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /.col-lg-2 - single-footer-wid -->
-
                 <div class="col-md-6 col-xl-4">
                     <div class="single-footer-wid recent_post_widget pl-xl-10 pl-65 pr-50 pr-xl-30">
-                        <h4 class="wid-title mb-30 color-white">Resent Post</h4>
+                        <h4 class="wid-title mb-30 color-white">Bài viết gần đây</h4>
 
                         <div class="recent-post-list">
                             <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
@@ -333,9 +320,9 @@
                                 </div>
 
                                 <div class="post-data">
-                                    <h5 class="color-white mb-10 fw-600">Why Purpose-Driven Employers Succeed</h5>
                                     <span class="color-white d-flex ailign-items-center"><i
                                             class="far fa-clock"></i>January 11, 2018</span>
+                                    <h5 class="color-white mb-10 fw-600">Xây dựng thương hiệu cá nhân</h5>
                                 </div>
                             </a>
 
@@ -345,14 +332,31 @@
                                 </div>
 
                                 <div class="post-data">
-                                    <h5 class="color-white mb-10 fw-600">Saving Time Achieving Success in Business</h5>
                                     <span class="color-white d-flex ailign-items-center"><i
-                                            class="far fa-clock"></i>november 12, 2019</span>
+                                        class="far fa-clock"></i>January 11, 2018</span>
+                                <h5 class="color-white mb-10 fw-600">Làm thế nào để không lãng phí thời gian</h5>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- /.col-lg-2 - single-footer-wid -->
+                <div class="col-md-6 col-xl-2">
+                    <div class="single-footer-wid pl-xl-10 pl-50">
+                        <h4 class="wid-title mb-30 color-white">Khoá học</h4>
+
+                        <ul>
+                            <li><a href="">Chuyên viên Marketing</a></li>
+                            <li><a href="">Chuyên viên Logistics</a></li>
+                            <li><a href="l">Quản lý hành chính- nhân sự</a></li>
+                            {{-- <li><a href="">Investor Career</a></li>
+                            <li><a href="">Meet Our Team</a></li>
+                            <li><a href="">Support</a></li> --}}
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- /.col-lg-4 - single-footer-wid -->
 
                 <div class="col-md-6 col-xl-3">
