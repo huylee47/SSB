@@ -40,7 +40,6 @@
     justify-content: center;
     text-align: center;
 }
-/* Toàn bộ giao diện */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -48,7 +47,6 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Container bao quanh các card */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -58,7 +56,6 @@ body {
   padding: 0 20px;
 }
 
-/* Card cơ bản */
 .card {
   background-color: #fff;
   border-radius: 10px;
@@ -75,18 +72,17 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Phần tròn phía trên */
 .card::before {
   content: "";
-  width: 125%; /* Độ rộng hình tròn lớn hơn chiều rộng card */
+  width: 125%;
   height: 160%;
   background-color: #ffa9b989;
   position: absolute;
-  top: -135%; /* Đẩy hình tròn lên trên */
+  top: -130%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  z-index: 0; /* Đảm bảo nó nằm dưới nội dung */
+  z-index: 0;
 }
 .card-outside {
   width: 115px;
@@ -100,7 +96,6 @@ body {
   z-index: 3; 
   border: 2px dotted #a71e38;
 }
-/* Icon trong hình tròn */
 .card-icon {
   width: 100px;
   height: 100px;
@@ -111,7 +106,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 2; /* Để icon nằm trên hình tròn */
+  z-index: 2;
 }
 
 .card-icon img {
@@ -119,7 +114,6 @@ body {
   height: 40px;
 }
 
-/* Tiêu đề */
 .card-title {
   font-size: 18px;
   font-weight: bold;
@@ -129,7 +123,6 @@ body {
   z-index: 2;
 }
 
-/* Nội dung */
 .card-content {
   font-size: 14px;
   color: #666;
@@ -138,7 +131,6 @@ body {
   z-index: 2;
 }
 
-/* Nút */
 .card-button {
   display: inline-block;
   margin-top: 15px;
