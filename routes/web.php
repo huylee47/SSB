@@ -3,5 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('client.layouts.index');
+});
+Route::get('/admin', function () {
+    return view('admin.dashboard.index');
 });
