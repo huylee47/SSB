@@ -23,7 +23,7 @@ class ConfigResource extends JsonResource
             'hotline' => $this->hotline ,
             'email' => $this->email,
             'address' => $this->address,
-            'map' => $this->address,
+            'map' => $this->map,
         ];
     }
 }

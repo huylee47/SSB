@@ -63,13 +63,13 @@
                     <div class="col-8">
                         <div class="header-cta d-flex justify-content-end">
                             <ul>
-                                <li><a><i class="icon-phone"></i> +8437 378 1186</a></li>
-                                <li><a href="mailto:consulter@example.com"><i class="icon-email"></i>info@ssb.edu.vn</a>
+                                <li><a><i class="icon-phone"></i> {{$config->hotline}}</a></li>
+                                <li><a href="mailto:{{$config->email}}"><i class="icon-email"></i>{{$config->email}}</a>
                                 </li>
                                 <div class="social-profile">
 
                                     <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="${{$config->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
@@ -204,7 +204,7 @@
                         <h6 class="color-black mb-5">Follow On:</h6>
 
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{$config->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
@@ -264,12 +264,12 @@
                             <span>
                                 <ul>
                                 <li>
-                                <p>45 Đông Hồ , Phường 8 , Quận Tân Bình , Thành Phố Hồ Chí Minh,Việt Nam</p>
+                                <p> {{$config->address}}</p>
                                 </li>
-                                <li><a><i class="icon-phone"></i> <span> +8437 378 1186</span>  </a></li>
-                                <li><a href="mailto:info@ssb.edu.vn"><i class="icon-email"></i> <span> info@ssb.edu.vn</span>  </a></li>
+                                <li><a><i class="icon-phone"></i> <span> {{$config->hotline}}</span>  </a></li>
+                                <li><a href="mailto:info@ssb.edu.vn"><i class="icon-email"></i> <span> {{$config->email}}</span>  </a></li>
                                 <li><a class=""><i class="icon-home-location"> </i> <span>  1901</span> </a></li>
-                                </ul>            
+                                </ul>
                             </span>
                         </div>
 
@@ -333,7 +333,7 @@
                     <div class="single-footer-wid">
                         <h4 class="wid-title mb-30 color-white">Office Location</h4>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.6288889943407!2d89.24179957479988!3d24.008878578805188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9bfb7d4038fb%3A0x2e698dd3196ad36f!2sRRDevs!5e0!3m2!1sen!2sbd!4v1707636832892!5m2!1sen!2sbd"
+                            src="{{$config->map}}"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

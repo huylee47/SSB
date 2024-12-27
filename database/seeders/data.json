@@ -12,14 +12,14 @@
     "config": [
         {
             "title": "SSB",
-            "description": "trường kinh doanh và đào tạo",
-            "facebook": "fb.com",
+            "description": "Trường kinh doanh và đào tạo",
+            "facebook": "https://www.facebook.com/Ouransoft",
             "logo": "logo.png",
             "favicon": "favicon.ico",
-            "hotline": "0123456789",
-            "address": "map",
-            "email" : "ssb@edu.vn",
-            "map": "ggmap"
+            "hotline": "+8437 378 1186",
+            "address": "45 Đông Hồ , Phường 2 , Quận Tân Bình , Thành Phố Hồ Chí Minh,Việt Nam",
+            "email": "ssb@edu.vn",
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.6288889943407!2d89.24179957479988!3d24.008878578805188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9bfb7d4038fb%3A0x2e698dd3196ad36f!2sRRDevs!5e0!3m2!1sen!2sbd!4v1707636832892!5m2!1sen!2sbd"
         }
     ],
     "blog": [

@@ -9,6 +9,15 @@ use App\Models\Config;
 
 class ConfigService
 {
+    public function find($id) {
+        $config = Config::find($id);
+
+        if ($config) {
+            return new ConfigResource($config);
+        } else {
+            return response()->json(['message' => 'Not found'], 404);
+        }
+    }
     public function index()
     {
         $configs = Config::all();

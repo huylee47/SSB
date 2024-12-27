@@ -1,13 +1,13 @@
 <?php
 
 use App\Http\Controllers\ConfigController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('client.layouts.index');
-});
+Route::get('/', [IndexController::class,"index"]);
+
 Route::prefix('/')->group(function (){
     Route::get('/login', [LoginController::class, 'index'])->name('login.view');
     // Route::get('/login', function () {
@@ -15,7 +15,7 @@ Route::prefix('/')->group(function (){
     // });
 
     Route::post('/login/auth', [LoginController::class, 'login'])->name('login.auth');
-}); 
+});
 Route::middleware(['auth'])->group(function(){
     Route::get('/admin', function () {
         return view('admin.dashboard.index');
