@@ -154,35 +154,35 @@ body {
     width: 400px;
     height: 600px;
     padding: 20px;
-  }
+}
 
-  .large-image-wrapper {
+.large-image-wrapper {
     position: relative;
     width: 100%;
     height: auto;
-  }
+}
 
-  .large-image {
+.large-image {
     position: relative;
     top: 35px;
     left: 30px;
     width: 400px;
     height: 420px;
     display: block;
-  }
+}
 
-  .large-image-wrapper::after {
+.large-image-wrapper::after {
     content: "";
     position: absolute;
     top: 20px;
     left: 15px;
     width: 350px;
     height: 450px;
-    border: 2px solid red;
+    border: 2px solid #a71e38;
     z-index: -1; /* Đưa viền xuống dưới ảnh lớn */
-  }
+}
 
-  .small-image {
+.small-image {
     position: absolute;
     right: -100px;
     bottom: 350px;
@@ -190,8 +190,11 @@ body {
     height: 300px;
     border: 2px solid white;
     z-index: 1;
-  }
-  .banner-home {
+}
+.banner-home {
     padding: 20px;
     margin-bottom: 20px;
-  }
+}
+.ftbg {
+    background-color: #a71e38;
+}

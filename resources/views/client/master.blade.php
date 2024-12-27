@@ -342,13 +342,13 @@
             </div>
         </div>
 
-        <div class="footer-bottom overflow-hidden mt-20 mt-sm-15 mt-xs-10">
+        <div class="footer-bottom overflow-hidden mt-20 mt-sm-15 mt-xs-10 ftbg">
             <div class="container">
                 <div
                     class="footer-bottom-content d-flex flex-column flex-md-row justify-content-between align-items-center">
                     <div class="coppyright text-center text-md-start">
-                        © 2024 <a href="index.html">Consulter</a> | All Rights Reserved by <a
-                            href="https://themeforest.net/user/rrdevs">RRDevs</a>
+                       Copyright © 2023  | All Rights Reserved by <a
+                            href="">OuranSoft</a>
                     </div>
 
                     <div class="footer-bottom-list last_no_bullet">

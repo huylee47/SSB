@@ -4,9 +4,7 @@
     <div class="banner-home overflow-hidden pt-lg-100 pt-md-90 pt-sm-80 pt-xs-70">
         <div class="container">
             {{-- <div class="row align-items-center"> --}}
-                <div class="banner-home">
-                    <img src="assets/img/banner/ssb.png" alt="" width="100%">
-                </div>
+                    <img src="assets/img/banner/ssb.png" alt="" width="100%">   
                 {{-- <div class="col-xl-6">
                     <div class="banner-home__content pb-lg-60 pb-md-50 pb-sm-45 pb-xs-40 wow fadeInLeft"
                         data-wow-delay=".5s">
