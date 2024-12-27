@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('hotline');
             $table->string('address');
             $table->string('email');
-            $table->string('map');
+            $table->text('map');
             $table->timestamps();
         });
     }

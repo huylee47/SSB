@@ -11,4 +11,7 @@ class Blog extends Model
     use HasFactory,SoftDeletes;
     protected $table = 'blogs';
     protected $fillable = ['title', 'user_id','content', 'description'];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
