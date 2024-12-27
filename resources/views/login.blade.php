@@ -25,7 +25,7 @@
                     <form action="{{route('login.auth')}}" method="POST">
                         @csrf
                         <div class="form-group position-relative has-icon-left mb-4">
-                            <input type="text" class="form-control form-control-xl" name="email" placeholder="nhập E-mail">
+                            <input type="text" class="form-control form-control-xl" name="username" placeholder="nhập tài khoản">
                             <div class="form-control-icon">
                                 <i class="bi bi-person"></i>
                             </div>
@@ -42,8 +42,14 @@
                                 Keep me logged in
                             </label> --}}
                         </div>
-                        @i
+
                         <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Đăng nhập</button>
+                        @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+                
                     </form>
                     <div class="text-center mt-5 text-lg fs-4">
                         {{-- <p class="text-gray-600">Don't have an account? <a href="auth-register.html"
