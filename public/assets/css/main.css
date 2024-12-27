@@ -9143,7 +9143,7 @@ header.header-1 .main-header-wraper .header-menu {
     margin-right: auto;
     padding-left: 76px !important;
 }
-@media (max-width: 1299px) {
+@media (max-width: 1100px) {
     header.header-1 .main-header-wraper .header-menu {
         padding-left: 60px !important;
     }
@@ -9938,8 +9938,8 @@ header.header-2 #hamburger {
     color: #ff9c00 !important;
 }
 header.header-3 .top-header {
-    padding-top: 0;
-    padding-bottom: 0;
+    /* padding-top: 0; */
+    /* padding-bottom: 0; */
 }
 header.header-3 .top-header .header-right-socail {
     gap: 20px;
@@ -11595,7 +11595,7 @@ header.transparent.stop.header-2 .main-header-wraper {
 
 .banner-home {
     z-index: 1;
-    background-color: #04213f;
+    background-color: #ffffff;
 }
 .banner-home:before {
     left: -28px;
@@ -19794,7 +19794,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     z-index: -1;
     height: 100%;
     position: absolute;
-    background: rgba(4, 33, 63, 0.95);
+    background: #000;
 }
 .footer-3 .footer-top__box-wrapper {
     gap: 30px;

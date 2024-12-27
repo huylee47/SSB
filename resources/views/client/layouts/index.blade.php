@@ -3,8 +3,11 @@
 <div>
     <div class="banner-home overflow-hidden pt-lg-100 pt-md-90 pt-sm-80 pt-xs-70">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
+            {{-- <div class="row align-items-center"> --}}
+                <div class="banner-home">
+                    <img src="assets/img/banner/ssb.png" alt="" width="100%">
+                </div>
+                {{-- <div class="col-xl-6">
                     <div class="banner-home__content pb-lg-60 pb-md-50 pb-sm-45 pb-xs-40 wow fadeInLeft"
                         data-wow-delay=".5s">
                         <h6 class="sub-title color-black mb-20 mb-sm-15 mb-xs-10 d-inline-block">Welcome To
@@ -33,8 +36,8 @@
                         <img src="assets/img/banner/banner-start.svg" class="img-fluid start" alt="">
                         <img src="assets/img/banner/banner-home.png" class="img-fluid" alt="">
                     </div>
-                </div>
-            </div>
+                </div> --}}
+            {{-- </div> --}}
         </div>
     </div>
     <!-- banner-home end -->
@@ -44,75 +47,75 @@
             <div class="container"></div>
         </div>
         <!-- financial-area start -->
-        <div class="financial pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
-            <div class="container">
-                <div class="row mb-minus-30">
-                    <div class="col-xl-4 col-md-6">
-                        <div class="financial__item d-flex mb-30 wow fadeInUp" data-wow-delay=".3s"
-                            style="background-image: url(assets/img/home/financial__item-bg.png)">
-                            <div class="icon">
-                                <img src="assets/img/icon/growth.svg" alt="">
-                                <!-- <i class="fal fa-analytics"></i> -->
-                            </div>
-    
-                            <div class="text">
-                                <h6 class="title color-pd_black mb-10 mb-xs-5">Business Strategy</h6>
-    
-                                <div class="description font-la">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
-                                    </p>
+            {{-- <div class="financial pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
+                <div class="container">
+                    <div class="row mb-minus-30">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="financial__item d-flex mb-30 wow fadeInUp" data-wow-delay=".3s"
+                                style="background-image: url(assets/img/home/financial__item-bg.png)">
+                                <div class="icon">
+                                    <img src="assets/img/icon/growth.svg" alt="">
+                                    <!-- <i class="fal fa-analytics"></i> -->
+                                </div>
+        
+                                <div class="text">
+                                    <h6 class="title color-pd_black mb-10 mb-xs-5">Business Strategy</h6>
+        
+                                    <div class="description font-la">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="col-xl-4 col-md-6">
-                        <div class="financial__item d-flex mb-30 wow fadeInUp" data-wow-delay=".5s"
-                            style="background-image: url(assets/img/home/financial__item-bg.png)">
-                            <div class="icon">
-                                <img src="assets/img/icon/planning-1.svg" alt="">
-                                <!-- <i class="fal fa-analytics"></i> -->
-                            </div>
-    
-                            <div class="text">
-                                <h6 class="title color-pd_black mb-10 mb-xs-5">Financial Planning</h6>
-    
-                                <div class="description font-la">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
-                                    </p>
+        
+                        <div class="col-xl-4 col-md-6">
+                            <div class="financial__item d-flex mb-30 wow fadeInUp" data-wow-delay=".5s"
+                                style="background-image: url(assets/img/home/financial__item-bg.png)">
+                                <div class="icon">
+                                    <img src="assets/img/icon/planning-1.svg" alt="">
+                                    <!-- <i class="fal fa-analytics"></i> -->
+                                </div>
+        
+                                <div class="text">
+                                    <h6 class="title color-pd_black mb-10 mb-xs-5">Financial Planning</h6>
+        
+                                    <div class="description font-la">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="col-xl-4 col-md-6">
-                        <div class="financial__item d-flex mb-30 wow fadeInUp" data-wow-delay=".7s"
-                            style="background-image: url(assets/img/home/financial__item-bg.png)">
-                            <div class="icon">
-                                <img src="assets/img/icon/international.svg" alt="">
-                                <!-- <i class="fal fa-analytics"></i> -->
-                            </div>
-    
-                            <div class="text">
-                                <h6 class="title color-pd_black mb-10 mb-xs-5">International Business</h6>
-    
-                                <div class="description font-la">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
-                                    </p>
+        
+                        <div class="col-xl-4 col-md-6">
+                            <div class="financial__item d-flex mb-30 wow fadeInUp" data-wow-delay=".7s"
+                                style="background-image: url(assets/img/home/financial__item-bg.png)">
+                                <div class="icon">
+                                    <img src="assets/img/icon/international.svg" alt="">
+                                    <!-- <i class="fal fa-analytics"></i> -->
+                                </div>
+        
+                                <div class="text">
+                                    <h6 class="title color-pd_black mb-10 mb-xs-5">International Business</h6>
+        
+                                    <div class="description font-la">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> --}}
         <!-- financial-area end -->
     
         <!-- our-company start -->
         <div class="our-company pb-xs-80 pb-100 overflow-hidden">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6">
+                    {{-- <div class="col-lg-3 col-sm-6">
                         <div class="our-company__meida wow fadeInUp" data-wow-delay=".3s">
                             <img src="assets/img/about/our-company-1.png" alt="" class="img-fluid">
     
@@ -132,9 +135,16 @@
     
                             <div class="horizental-bar bg-red"></div>
                         </div>
+                    </div> --}}
+                    <div class="col-lg-5">
+                    <div class="image-container">
+                        <div class="large-image-wrapper">
+                            <img src="assets/img/about/our-company-2.png" alt="Large Image" class="large-image" />
+                        </div>
+                        <img src="assets/img/about/our-company-2.png" alt="Small Image" class="small-image" />
+                      </div>
                     </div>
-    
-                    <div class="col-lg-6">
+                      <div class="col-lg-7">
                         <div class="our-company__content mt-md-50 mt-sm-40 mt-xs-35 wow fadeInUp"
                             data-wow-delay=".7s">
                             <span class="sub-title fw-500 color-red text-uppercase mb-sm-10 mb-xs-5 mb-20 d-block"><img
@@ -732,7 +742,7 @@
                             </div>
                         </div>
     
-                        <a href="team-details.html" class="theme-btn text-uppercase">View Ddetails <i
+                        <a href="team-details.html" class="theme-btn text-uppercase">View Details <i
                                 class="far fa-chevron-double-right"></i></a>
                     </div>
                 </div>
@@ -761,7 +771,7 @@
                             </div>
                         </div>
     
-                        <a href="team-details.html" class="theme-btn text-uppercase">View Ddetails <i
+                        <a href="team-details.html" class="theme-btn text-uppercase">View Details <i
                                 class="far fa-chevron-double-right"></i></a>
                     </div>
                 </div>
@@ -790,7 +800,7 @@
                             </div>
                         </div>
     
-                        <a href="team-details.html" class="theme-btn text-uppercase">View Ddetails <i
+                        <a href="team-details.html" class="theme-btn text-uppercase">View Details <i
                                 class="far fa-chevron-double-right"></i></a>
                     </div>
                 </div>

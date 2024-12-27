@@ -87,13 +87,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="header-logo">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/logo-3.png" alt="logo" width="20%">
+                                        <img src="assets/img/logo/logo.png" alt="logo" width="20%">
                                     </a>
                                 </div>
-                            </div>
 
                             <div class="header-menu d-none d-xl-block">
                                 <div class="main-menu">
@@ -159,57 +157,29 @@
         <nav class="sidebar-nav">
             <div class="navigation">
                 <div class="consulter-mobile-nav">
-                    <ul>
-                        <li>
                             <a href="#">Home</a>
                             <ul>
-                                <li><a href="index.html">home 1</a></li>
-                                <li><a href="index-2.html">home 2</a></li>
-                                <li><a href="index-3.html">home 3</a></li>
-                                <li><a href="index-4.html">home 4</a></li>
-                                <li><a href="index-5.html">home 5</a></li>
+                                <li>
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Giới thiệu</a>
+                                </li>
+                                <li>
+                                    <a href="#">Khoá học</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="#">Liên hệ</a>
+                                </li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="services.html">Our Services</a>
-
-                            <ul>
-                                <li><a href="services.html">Our Services 1</a></li>
-                                <li><a href="services-2.html">Our Services 2</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>Pages</a>
-
-                            <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="table.html">Pricing Table</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                                <li><a href="our-project-details.html">Our Project Details</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                                <li><a href="404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="our-project.html">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="blog.html">Blog</a>
-
-                            <ul>
-                                <li><a href="blog.html">Blog 1</a></li>
-                                <li><a href="blog-standard.html">Blog 2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
 
                 <div class="sidebar-nav__bottom mt-20">
                     <div class="sidebar-nav__bottom-contact-infos mb-20">
-                        <h6 class="color-black mb-5">Contact Info</h6>
+                        <h6 class="color-black mb-5">thông tin liên hệ</h6>
 
                         <ul>
                             <li><a><i class="fal fa-clock"></i> Mon – Fri: 8.00 – 18.00</a></li>
@@ -285,7 +255,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <a href="index.html" class="d-block mb-30 mb-xs-20">
-                    <img src="assets/img/logo/footer-logo-3.png" alt="" width="20%">
+                    <img src="assets/img/logo/footer-logo.png" alt="" width="20%">
                 </a>
                 <div class="col-md-6 col-xl-3">
                     <div class="single-footer-wid widget-description">

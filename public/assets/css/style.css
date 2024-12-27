@@ -32,7 +32,7 @@
     position: absolute;
     left: 0;
     font-size: 10px;
-    font-weight : bold;
+    font-weight: bold;
     width: 15px;
     height: 15px;
     display: flex;
@@ -41,111 +41,157 @@
     text-align: center;
 }
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  padding: 30px 20px 20px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 30px 20px 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card::before {
-  content: "";
-  width: 125%;
-  height: 160%;
-  background-color: #ffa9b989;
-  position: absolute;
-  top: -130%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  z-index: 0;
+    content: "";
+    width: 125%;
+    height: 160%;
+    background-color: #a71e374d;
+    position: absolute;
+    top: -130%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 0;
 }
 .card-outside {
-  width: 115px;
-  height: 115px;
-  margin: 0 auto;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 3; 
-  border: 2px dotted #a71e38;
+    width: 115px;
+    height: 115px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    border: 2px dotted #a71e38;
 }
 .card-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: #ff3d3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #a71e38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .card-icon img {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin: 15px 0;
-  position: relative;
-  z-index: 2;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .card-content {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-  position: relative;
-  z-index: 2;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
 }
 
 .card-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 15px;
-  font-size: 14px;
-  color: #ff5555;
-  border: 1px solid #ff5555;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  position: relative;
-  z-index: 2;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #a71e38;
+    border: 1px solid #a71e38;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .card-button:hover {
-  background-color: #ff5555;
-  color: #fff;
+    background-color: #a71e38;
+    color: #fff;
 }
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+  }
+
+  .large-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .large-image {
+    position: relative;
+    top: 35px;
+    left: 30px;
+    width: 400px;
+    height: 420px;
+    display: block;
+  }
+
+  .large-image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 350px;
+    height: 450px;
+    border: 2px solid red;
+    z-index: -1; /* Đưa viền xuống dưới ảnh lớn */
+  }
+
+  .small-image {
+    position: absolute;
+    right: -100px;
+    bottom: 350px;
+    width: 200px;
+    height: 300px;
+    border: 2px solid white;
+    z-index: 1;
+  }
+  .banner-home {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
