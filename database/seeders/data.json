@@ -1,0 +1,46 @@
+{
+    "user": [
+        {
+            "name": "quản trị viên",
+            "username": "admin",
+            "email": "johndoe@example.com",
+            "password": "123456",
+            "avatar": "avatar.png",
+            "role_id": "1"
+        }
+    ],
+    "config": [
+        {
+            "title": "SSB",
+            "description": "trường kinh doanh và đào tạo",
+            "facebook": "fb.com",
+            "logo": "logo.png",
+            "favicon": "favicon.ico",
+            "hotline": "0123456789",
+            "address": "map",
+            "email" : "ssb@edu.vn",
+            "map": "ggmap"
+        }
+    ],
+    "blog": [
+        {
+            "user_id": "1",
+            "title": "Về chúng tôi",
+            "description": "trường kinh doanh và đào tạo",
+            "content": "test"
+        }
+    ],
+    "role": [
+        {
+            "name": "quản trị viên"
+        }
+    ],
+    "course": [
+        {
+            "title": "marketing",
+            "description": "khoá học marketing",
+            "content": "đây là khoá học marketing",
+            "img": "1.png"
+        }
+    ]
+}

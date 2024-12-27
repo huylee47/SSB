@@ -22,7 +22,7 @@
                     <h1 class="auth-title">Đăng nhập</h1>
                     {{-- <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p> --}}
 
-                    <form action="" method="POST">
+                    <form action="{{route('login.auth')}}" method="POST">
                         @csrf
                         <div class="form-group position-relative has-icon-left mb-4">
                             <input type="text" class="form-control form-control-xl" name="email" placeholder="nhập E-mail">
@@ -42,6 +42,7 @@
                                 Keep me logged in
                             </label> --}}
                         </div>
+                        @i
                         <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Đăng nhập</button>
                     </form>
                     <div class="text-center mt-5 text-lg fs-4">
