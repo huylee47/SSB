@@ -9,5 +9,5 @@ class Config extends Model
 {
     use HasFactory;
     protected $table = 'configs';
-    protected $fillable = ['title', 'description', 'logo', 'favicon', 'hotline', 'email', 'address','map'];
+    protected $fillable = ['title', 'description',"facebook", 'logo', 'favicon', 'hotline', 'email', 'address','map'];
 }
