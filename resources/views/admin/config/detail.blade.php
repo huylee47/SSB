@@ -1,3 +1,6 @@
+@extends('admin.layouts.master')
+@section('main')
+    <div id="main">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,3 +65,4 @@
 </form>
 </body>
 </html>
+    </div>

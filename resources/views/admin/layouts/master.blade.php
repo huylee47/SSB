@@ -58,6 +58,13 @@
                             </a>
                         </li>
 
+                        <li class="sidebar-item  {{ request()->routeIs('config.edit',"1") ? 'active' : '' }}">
+                            <a href="{{ route('config.edit',"1") }}" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Configuration</span>
+                            </a>
+                        </li>
+
                         {{-- <li class="sidebar-item {{ request()->routeIs('admin.property.index') ? 'active' : '' }}">
                             <a href="{{ route('admin.property.index') }}" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>

@@ -1,71 +1,114 @@
+@extends('admin.layouts.master')
+@section('main')
+    <div id="main">
+        <head>
+            <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+            <style>
+                .form-container {
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    margin-top: 20px;
+                }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Config</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/config.css') }}">
-</head>
-<body>
-<h1>Edit Config</h1>
-<form
-    action="{{ route('config.update',$config->id)}}"
-    method="POST">
-    @csrf
-    @method('put')
+                body {
+                    /*page background, blue looks weird*/
+                    background-color: #f8f9fa;
+                }
+            </style>
+        </head>
+        <body>
+        <div class="container">
+            <h2 class="my-4">Cấu hình hệ thống</h2>
+            <div class="form-container">
+                <form action="{{ route('config.update',  ['config' => $config->id]) }}" method="POST"
+                enctype="multipart/form-data"
+                >
+                    @csrf
+                    <!-- ID (hidden) -->
+                    <div class="row" style="display:none;">
+                        <div class="col-md-6">
+                            <label for="id">ID:</label>
+                            <input readonly type="number" id="id" name="id" class="form-control" required
+                                   value="{{$config->id}}">
+                        </div>
+                    </div>
 
-    <div>
-        <label for="title">ID:</label>
-        <input readonly type="number" id="id" name="id" required value="{{$config->id}}">
+                    <!-- Title and Description -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="font-weight-bold" for="title">Tiêu đề trang</label>
+                            <input type="text" id="title" name="title" class="form-control" required
+                                   value="{{$config->title}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="description">Từ khoá</label>
+                            <input type="text" id="description" name="description" class="form-control"
+                                   value="{{ $config->description ?? '' }}">
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="hotline">Liên hệ</label>
+                            <input type="text" id="hotline" name="hotline" class="form-control" required
+                                   value="{{$config->hotline}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                   value="{{$config->email}}">
+                        </div>
+                    </div>
+
+                    <!-- Address and Map -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="address">Trụ sở chính</label>
+                            <textarea id="address" name="address"
+                                      class="form-control">{{ $config->address ?? '' }}</textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="map">Link bản đồ</label>
+                            <textarea id="map" name="map" class="form-control">{{ $config->map ?? '' }}</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Logo and Favicon -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="logo">Logo</label>
+                            <input accept=".jpg,.gif,.png,.heic" id="logo" type="file" class="form-control" name="logo"
+                                   value="{{$config->logo}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="favicon">Link Favicon</label>
+                            <input accept=".ico,.icon" id="favicon" type="file" class="form-control" name="favicon"
+                                   value="{{$config->favicon}}">
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="facebook">Link FACEBOOK</label>
+                            <input type="text" id="facebook" name="facebook" class="form-control" required
+                                   value="{{$config->facebook}}">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary mt-4">Cập nhật</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </body>
+
     </div>
-    <div>
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required value="{{$config->title}}">
-    </div>
-    <div>
-        <label for="description">Description:</label>
-        @isset($config->description)
-            <textarea type="text" id="description" name="description" value="{{$config->description}}">{{$config->description}}</textarea>
-        @else
-            <textarea type="text" id="description" name="description" value="{{$config->description}}"></textarea>
-        @endIf
-    </div>
-    <div>
-        <label for="logo">Logo URL:</label>
-        <input type="text" id="logo" name="logo" required value="{{$config->logo}}">
-    </div>
-    <div>
-        <label for="logo">Facebook URL:</label>
-        <input type="text" id="facebook" name="facebook" required value="{{$config->facebook}}">
-    </div>
-    <div>
-        <label for="favicon">Favicon URL:</label>
-        <input type="text" id="favicon" name="favicon" required value="{{$config->favicon}}">
-    </div>
-    <div>
-        <label for="hotline">Hotline:</label>
-        <input type="text" id="hotline" name="hotline" required value="{{$config->hotline}}">
-    </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required value="{{$config->email}}">
-    </div>
-    <div>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required value="{{$config->address}}">
-    </div>
-    <div>
-        <label for="map">Map Embed Code:</label>
-        @isset($config->map)
-            <textarea type="text" id="map" name="map"  value="{{$config->map}}">{{$config->map}}</textarea>
-        @else
-            <textarea type="text" id="map" name="map"  value="{{$config->map}}"></textarea>
-        @endIf
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-</form>
-</body>
-</html>
+@endsection
