@@ -20,6 +20,7 @@ class ConfigResource extends JsonResource
             'description' => $this->description ,
             'logo' => $this->logo ,
             'favicon' => $this->favicon ,
+            'facebook'=>$this->facebook,
             'hotline' => $this->hotline ,
             'email' => $this->email,
             'address' => $this->address,

@@ -22,15 +22,15 @@ class StoreConfigRequest extends FormRequest
     public function rules(): array
     {
         return [
-//            "title"=>["required"],
-//            "description"=>["required"],
-//            "facebook"=>["required","url"],
-//            "logo"=>["required"],
-//            "favicon"=>["required"],
-//            "hotline"=>["required"],
-//            "email"=>["required","email"],
-//            "address"=>["required"],
-//            "map"=>["required"],
+            "title"=>["required","max:255"],
+            "description"=>["required","max:255"],
+            "facebook"=>["required","url"],
+            "logo"=>[""],
+            "favicon"=>[""],
+            "hotline"=>["required"],
+            "email"=>["required","email"],
+            "address"=>["required"],
+            "map"=>["required"],
 
         ];
     }

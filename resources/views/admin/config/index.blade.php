@@ -1,3 +1,6 @@
+@extends('admin.layouts.master')
+@section('main')
+    <div id="main">
 <link rel="stylesheet" href="{{ asset('assets/css/config.css') }}">
 <div class="config-container">
     <!-- Simplicity is the consequence of refined emotions. - Jean D'Alembert -->
@@ -16,3 +19,4 @@
         </div>
     @endforeach
 </div>
+    </div>
