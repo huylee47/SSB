@@ -21,7 +21,9 @@ class Authentication
         if (!$user || !$user->role || $user->role->role_name !== $role) {
             return response()->json(['message' => 'Unauthorized'], 403);
         }
-
+        if (!Auth::check()) {
+            return redirect()->route('login.view');
+        }
         return $next($request);
     }
 }

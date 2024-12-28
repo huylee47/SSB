@@ -38,41 +38,28 @@
                         @endif
 
                         {{-- Nút thêm thẻ --}}
-                        <a href="{{ route('admin.tag.show_add') }}" class="btn btn-primary mb-3">Thêm thẻ</a>
+                        {{-- <a href="{{ route('admin.tag.show_add') }}" class="btn btn-primary mb-3">Thêm thẻ</a> --}}
 
                         {{-- Bảng danh sách thẻ --}}
                         <table class="table table-striped table-bordered" id="table1">
                             <thead>
                                 <tr>
                                     <th class="col-1">#</th>
-                                    <th class="col-5">Tên thẻ</th>
-                                    <th class="col-3">Trạng thái</th>
-                                    <th class="col-3">Hành động</th>
+                                    <th class="col-2">Tên khoá học</th>
+                                    <th class="col-2">Mô tả</th>
+                                    <th class="col-3">Nội dung</th>
+                                    <th class="col-2">ảnh</th>
+                                    <th class="col-2">chức năng</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($tags as $index => $tag)
+                                @foreach ($courses as $index => $tag)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $tag->name }}</td>
-                                        <td>
-                                            @if ($tag->status == 1)
-                                                <span class="badge bg-success">Hoạt động</span>
-                                            @else
-                                                <span class="badge bg-secondary">Đã ẩn</span>
-                                            @endif
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="{{ route('admin.tag.edit', ['id' => $tag->id]) }}" class="btn btn-info">Sửa</a>
-                                            <form action="{{ $tag->status == 1 ? route('admin.tag.destroy', ['id' => $tag->id]) : route('admin.tag.restore', ['id' => $tag->id]) }}" 
-                                                method="POST" style="display:inline;">
-                                                @csrf
-                                                @method('POST')
-                                                <button type="submit" class="btn btn-{{ $tag->status == 1 ? 'danger' : 'success' }}">
-                                                    {{ $tag->status == 1 ? 'Ẩn' : 'Hiện' }}
-                                                </button>
-                                            </form>
-                                        </td>
+                                        <td>{{ $tag->title }}</td>
+                                        <td>{{ $tag->description }}</td>
+                                        <td>{{ $tag->content }}</td>
+                                        <td>{{ $tag->img }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

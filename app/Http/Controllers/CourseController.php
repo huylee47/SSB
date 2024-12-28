@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Service\CourseService;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    private $courseService;
+    public function __construct(CourseService $courseService){
+        $this->courseService = $courseService;
+    }
     public function index()
     {
-        //
+        return $this->courseService->index();
     }
 
     /**
