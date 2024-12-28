@@ -2,7 +2,6 @@
 Template: CONSULTER - Business Consulting HTML Template
 Author: RRDevs
 */
-
 (function($) {
     "use strict";
 

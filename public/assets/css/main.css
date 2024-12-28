@@ -411,8 +411,8 @@ button {
 }
 @font-face {
     font-family: "Lato";
-    src: url("assets/fonts/Lato-Medium.woff2") format("woff2"),
-        url("assets/fonts/Lato-Medium.woff") format("woff");
+    src: url("../fonts/Lato-Medium.woff2") format("woff2"),
+        url("../fonts/Lato-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -10641,7 +10641,7 @@ header.hover-color-green
     bottom: -280px;
     height: 486.71px;
     position: absolute;
-    background-image: url("assets/img/page-banner/pattern.svg");
+    background-image: url("../../assets/img/banner/pattern.svg");
 }
 @media (max-width: 767px) {
     .page-banner:before {
@@ -10770,7 +10770,7 @@ header.hover-color-green
     height: 100%;
     position: absolute;
     background-size: cover;
-    background-image: url(assets/img/page-banner/page-banner-overly.png);
+    background-image: url(../img/page-banner/page-banner-overly.png);
 }
 .page-banner__media:before {
     content: "";
@@ -11606,7 +11606,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     height: 545.85px;
     position: absolute;
     background-repeat: no-repeat;
-    background-image: url(assets/img/banner/pattern.svg);
+    background-image: url(../../assets/img/banner/pattern.svg);
 }
 @media (max-width: 1199px) {
     .banner-home:before {
@@ -11631,7 +11631,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     height: 208px;
     position: absolute;
     background-repeat: no-repeat;
-    background-image: url(assets/img/banner/banner-overly.svg);
+    background-image: url(../../assets/img/banner/banner-overly.svg);
 }
 .banner-home__content .sub-title {
     border-radius: 2px;
@@ -11984,7 +11984,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     position: absolute;
     background-size: auto;
     background-repeat: no-repeat;
-    background-image: url(assets/img/about/bg-team.png);
+    background-image: url(../img/about/bg-team.png);
 }
 @media (max-width: 1199px) {
     .our-team__content .title {
@@ -12074,7 +12074,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     background-size: auto;
     background-repeat: no-repeat;
     animation: scale 3s linear infinite;
-    background-image: url(assets/img/services/why-counter-overly-3.png);
+    background-image: url(../../assets/img/services/why-counter-overly-3.png);
 }
 .our-company__meida {
     overflow: hidden;
@@ -14027,7 +14027,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     position: absolute;
     background-size: auto;
     background-repeat: no-repeat;
-    background-image: url(assets/img/home/why-choose__home-overly.png);
+    background-image: url(../img/home/why-choose__home-overly.png);
 }
 .why-choose .why-choose__item-two-wrapper {
     gap: 30px 30px;
@@ -16862,7 +16862,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     width: 2552.29px;
     position: absolute;
     background-size: auto;
-    background-image: url(assets/img/home/can-overly-home.png);
+    background-image: url(../img/home/can-overly-home.png);
 }
 
 .our-team-home-1 .container:after {
@@ -17106,7 +17106,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     position: absolute;
     background-size: auto;
     background-repeat: no-repeat;
-    background-image: url(assets/img/home/our-company-financial-overly.svg);
+    background-image: url(../img/home/our-company-financial-overly.svg);
 }
 .our-company-financial .our-company .container:after {
     content: inherit;
@@ -19979,14 +19979,14 @@ header.transparent.stop.header-2 .main-header-wraper {
     width: 228px;
     height: 229px;
     bottom: -835px;
-    background-image: url(assets/img/footer/spot-1.png);
+    background-image: url(../img/footer/spot-1.png);
 }
 .footer-3 .overly .container:before {
     top: -66px;
     height: 270px;
     right: -268px;
     width: 264.01px;
-    background-image: url(assets/img/footer/spot-2.png);
+    background-image: url(../img/footer/spot-2.png);
 }
 
 .footer-1 .newsletter_widget .newsletter_box_2 form input {
