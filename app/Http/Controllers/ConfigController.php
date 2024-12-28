@@ -55,7 +55,7 @@ class ConfigController extends Controller
      */
     public function edit(Config $config)
     {
-        return view("configEditView",compact("config"));
+       return $this->configService->edit($config);
     }
 
     /**

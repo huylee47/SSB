@@ -37,7 +37,7 @@ class ConfigService
     {
         $config = new ConfigResource($config);
 //        return $config;
-        return view("admin.config.index",compact("config"));
+        return view("admin.config.detail",compact("config"));
     }
 
     public function edit(Config $config)
