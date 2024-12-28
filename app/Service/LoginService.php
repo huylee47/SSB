@@ -26,4 +26,8 @@ class LoginService {
         // $user = Auth::user();   
         return redirect('/admin')->with('sucess','đăng nhập thành công');
     }
+    public function logout(){
+        Auth::logout();
+        return redirect('/login')->with('success','đăng xuất thành công');
+    }
 }
