@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="dev_raj">
     <!-- ======== Page title ============ -->
-    <title>Tường Kinh Doanh và Lãnh Đạo</title>
+    <title>{{$config->title}}</title>
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <!-- ===========  All Stylesheet ================= -->
