@@ -22,7 +22,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return $this->courseService->create();
     }
 
     /**
@@ -30,7 +30,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->courseService->store($request);
     }
 
     /**
@@ -44,24 +44,25 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Course $course)
+    public function edit($id)
     {
-        //
+        return $this->courseService->edit($id);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, $id)
     {
-        //
+        return $this->courseService->update($request, $id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Course $course)
+    public function delete($id)
     {
-        //
+        return $this->courseService->delete($id);
     }
 }
