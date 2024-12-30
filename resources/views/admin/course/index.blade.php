@@ -38,7 +38,7 @@
                         @endif
 
                         {{-- Nút thêm thẻ --}}
-                        {{-- <a href="{{ route('admin.tag.show_add') }}" class="btn btn-primary mb-3">Thêm thẻ</a> --}}
+                        <a href="{{ route('admin.course.add') }}" class="btn btn-primary mb-3">Thêm thẻ</a>
 
                         {{-- Bảng danh sách thẻ --}}
                         <table class="table table-striped table-bordered" id="table1">
@@ -53,13 +53,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($courses as $index => $tag)
+                                @foreach ($courses as $index => $course)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $tag->title }}</td>
-                                        <td>{{ $tag->description }}</td>
-                                        <td>{{ $tag->content }}</td>
-                                        <td>{{ $tag->img }}</td>
+                                        <td>{{ $course->title }}</td>
+                                        <td>{{ $course->description }}</td>
+                                        <td>{!! htmlspecialchars_decode($course->content) !!}</td>
+                                        <td>
+                                            <img src="{{ url('') }}/assets/img/thumbnails/{{$course->thumbnail}}"style="width: 200px;">
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('admin.course.edit', ['id' => $course->id]) }}" class="btn btn-info btn-sm">Chỉnh sửa</a>
+                                            <a href="{{ route('admin.course.delete', ['id' => $course->id]) }}" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
