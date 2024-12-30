@@ -43,15 +43,29 @@
                                 @endif
 
                                 {{-- Form thêm thẻ --}}
-                                <form action="{{ route('admin.tag.store') }}" method="POST">
+                                <form action="{{ route('admin.course.store') }}" method="POST"
+                                    enctype="multipart/form-data">
                                     @csrf
+                                    <label for="">Ảnh bìa khoá học</label>
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Tên Thẻ</label>
-                                        <input type="text" class="form-control" id="name" name="name"
-                                            value="{{ old('name') }}" required>
+                                        <input type="file" accept="image/*" class="custom-file-input" id="customFile"
+                                            name="thumbnail">
+                                        <label class="custom-file-label" for="customFile">Chọn ảnh</label>
                                     </div>
-
-                                    <button type="submit" class="btn btn-primary">Thêm Thẻ</button>
+                                    <div class="mb-3">
+                                        <label for="title" class="form-label">Tên Khoá học</label>
+                                        <input type="text" class="form-control" id="title" name="title" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Mô tả</label>
+                                        <input type="text" class="form-control" id="description" name="description"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Nội dung</label>
+                                        <textarea id="my-editor" name="content" class="form-control">{{ old('content') }}</textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Thêm Khoá học</button>
                                 </form>
                             </div>
                         </div>
@@ -59,4 +73,28 @@
                 </div>
             </section>
         </div>
-    @endsection
+        <script src="https://cdn.ckeditor.com/4.5.11/full-all/ckeditor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+        <script>
+            $('#input_image').change(function(){
+                if(this.files && this.files[0]){
+                      var reader = new FileReader();
+                      reader.onload = function(e) {
+                $('#holder_image').attr("src", e.target.result);
+                      };
+                      
+                      reader.readAsDataURL(this.files[0]);
+                }
+            })
+            var options = {
+                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                filebrowserBrowseUrl: '/laravelmy-edito-filemanager?type=Files',
+                filebrowserUploadUrl: 'new/ck_editor',
+                filebrowserUploadMethod: 'form'
+            };
+            CKEDITOR.replace('my-editor', options);
+            
+        </script>
+@endsection

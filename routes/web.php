@@ -23,11 +23,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('admin.index');
         Route::prefix('/course')->group(function () {
             Route::get('/', [CourseController::class, 'index'])->name('admin.course.index');
-            Route::get('/add', [CourseController::class, 'create'])->name('course.add');
-            // Route::post('/store',[CourseController::class,'store'])->name('course.store');
-            // Route::get('/edit/{course}',[CourseController::class,'edit'])->name('course.edit');
-            // Route::put('/update/{course}',[CourseController::class,'update'])->name('course.update');
-            // Route::delete('/delete/{course}',[CourseController::class,'destroy'])->name('course.delete');
+            Route::get('/add', [CourseController::class, 'create'])->name('admin.course.add');
+            Route::post('/store',[CourseController::class,'store'])->name('admin.course.store');
+            Route::get('/edit/{id}',[CourseController::class,'edit'])->name('admin.course.edit');
+            Route::post('/update/{id}',[CourseController::class,'update'])->name('admin.course.update');
+            Route::get('/delete/{id}',[CourseController::class,'delete'])->name('admin.course.delete');
         });
     });
 
