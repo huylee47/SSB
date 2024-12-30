@@ -271,13 +271,18 @@
                     @foreach($courses as $course)
                         <div class="card">
                             <div class="card-outside">
-                                <div class="card-icon">
-                                    <img src="{{$course->img}}" alt="Marketing" />
+                                <div class="card-icon d-flex justify-content-center align-items-center">
+                                    <img
+                                        src="{{URL::asset($course->img)}}"
+                                        alt="{{$course->title}}"
+                                        onerror="this.parentNode.innerHTML=this.alt;"
+                                        class="img-fluid rounded-circle w-100 h-100 object-fit-cover overflow-hidden"
+                                    />
                                 </div>
                             </div>
 
                             <div class="card-title">{{$course->title}}</div>
-                            <div class="card-content">
+                            <div class="card-content d-inline-block text-truncate" >
                                 {{$course->description}}
                             </div>
                             <a href="#" class="card-button">Xem chi tiết</a>

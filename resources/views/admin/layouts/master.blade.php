@@ -60,8 +60,8 @@
 
                         <li class="sidebar-item  {{ request()->routeIs('config.edit',"1") ? 'active' : '' }}">
                             <a href="{{ route('config.edit',"1") }}" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Configuration</span>
+                                <i class="bi bi-gear"></i>
+                                <span>Cấu hình hệ thống</span>
                             </a>
                         </li>
 
