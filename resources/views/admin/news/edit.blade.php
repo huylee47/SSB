@@ -87,7 +87,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="tags">Thẻ liên quan</label>
+                                        <label for="tags">khoá học liên quan</label>
                                         <select class="form-control selectpicker" id="tags" name="tags[]" multiple>
                                             @foreach ($tags as $tag)
                                                 <option value="{{ $tag->id }}"
@@ -103,7 +103,7 @@
                                         </div>
                                     </div>
                                     <input type="hidden" name="content" id="content">
-                                    <input type="hidden" name="id" value="{{$news->id}}">
+                                    <input type="hidden" name="id" value="{{ $news->id }}">
                                     <button type="submit" class="btn btn-primary">Cập nhật</button>
                                 </form>
                             </div>

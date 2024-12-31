@@ -11,13 +11,13 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-md-6 order-md-1 order-last">
-                        <h3>Thêm Thẻ</h3>
+                        <h3>Thêm khoá học</h3>
                     </div>
                     <div class="col-12 col-md-6 order-md-2 order-first">
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Thêm Thẻ</li>
+                                <li class="breadcrumb-item active" aria-current="page">Thêm khoá học</li>
                             </ol>
                         </nav>
                     </div>
@@ -28,7 +28,6 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Thêm Thẻ</h4>
                             </div>
                             <div class="card-body">
                                 {{-- Hiển thị thông báo lỗi --}}
@@ -42,13 +41,13 @@
                                     </div>
                                 @endif
 
-                                {{-- Form thêm thẻ --}}
+                                {{-- Form thêm khoá học --}}
                                 <form action="{{ route('admin.course.store') }}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <label for="">Ảnh bìa khoá học</label>
                                     <div class="mb-3">
-                                        <input type="file" accept="image/*" class="custom-file-input" id="customFile"
+                                        <input type="file" accept="image/*" class="form-control" id="customFile"
                                             name="thumbnail">
                                         <label class="custom-file-label" for="customFile">Chọn ảnh</label>
                                     </div>
@@ -77,14 +76,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
         <script>
-            $('#input_image').change(function(){
-                if(this.files && this.files[0]){
-                      var reader = new FileReader();
-                      reader.onload = function(e) {
-                $('#holder_image').attr("src", e.target.result);
-                      };
-                      
-                      reader.readAsDataURL(this.files[0]);
+            $('#input_image').change(function() {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#holder_image').attr("src", e.target.result);
+                    };
+
+                    reader.readAsDataURL(this.files[0]);
                 }
             })
             var options = {
@@ -95,6 +94,5 @@
                 filebrowserUploadMethod: 'form'
             };
             CKEDITOR.replace('my-editor', options);
-            
         </script>
-@endsection
+    @endsection
