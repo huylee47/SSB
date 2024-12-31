@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConfigController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DashboardController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, "index"])->name('index');
+
 
 Route::prefix('/login')->group(function () {
     Route::get('/', [LoginController::class, 'index'])->name('login');
@@ -39,6 +41,12 @@ Route::prefix("config")->name("config.")->middleware(["auth"])->group(function (
     Route::get("/{config}", [ConfigController::class, "show"])->name("show");//Hiêển thị chi tiết
 });
 
+//Route::get("/contact/create",[ContactController::class,"create"])->name("contact.create");
+//Route::post("contact/store",[ContactController::class,"store"])->name("contact.store");
+Route::prefix("contact")->name("contact.")->group(function (){
+    Route::get("/create",[ContactController::class,"create"])->name("create");
+    Route::post("/store",[ContactController::class,"store"])->name("store");
+});
 
 
 

@@ -13,23 +13,33 @@
     <!-- ======== Page title ============ -->
     <title>{{$config->title}}</title>
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link type="image/png" href="{{ asset('assets/img/favicon.png') }}">
     <!-- ===========  All Stylesheet ================= -->
-    <link rel="stylesheet" href="assets/css/icons.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/slick.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+{{--    <link rel="stylesheet" href="assets/css/icons.css">--}}
+{{--    <link rel="stylesheet" href="assets/css/magnific-popup.css">--}}
+{{--    <link rel="stylesheet" href="assets/css/slick.min.css">--}}
+{{--    <link rel="stylesheet" href="assets/css/animate.min.css">--}}
+{{--    <link rel="stylesheet" href="assets/css/bootstrap.min.css">--}}
+{{--    <link rel="stylesheet" href="assets/css/main.css">--}}
+{{--    <link rel="stylesheet" href="assets/css/style.css">--}}
 
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/slick.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+{{--    The script below prevents FOUC on Firefox--}}
+    <script>0</script>
 </head>
 
 <body class="body-wrapper">
 
     <!-- preloader start -->
     <div id="preloader">
-        <div class="preloader-close">x</div>
+{{--        <div class="preloader-close">x</div>--}}
+{{--        Disabled because no reason to click preloader-close--}}
         <div class="sk-three-bounce">
             <div class="sk-child sk-bounce1"></div>
             <div class="sk-child sk-bounce2"></div>
@@ -88,8 +98,8 @@
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-between">
                                 <div class="logo">
-                                    <a href="index.html">
-                                        <img src="assets/img/logo/logo.png" alt="logo" width="20%">
+                                    <a  href="{{route("home")}}">
+                                        <img src="{{asset("assets/img/logo/logo.png")}}" alt="logo" width="20%">
                                     </a>
                                 </div>
 
@@ -109,7 +119,7 @@
                                             <a href="#">Tin tức</a>
                                         </li>
                                         <li>
-                                            <a href="#">Liên hệ</a>
+                                            <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -224,10 +234,12 @@
 
     <!-- banner-home start -->
     {{-- main  --}}
-    @yield('content')
+    <div id="content">
+        @yield('content')
+    </div>
     <!-- footer start -->
     <footer class="footer-1 footer-3 overflow-hidden"
-        style="background-image: url(assets/img/footer/footer-bg-3.png);">
+        style="background-image: url({{asset("assets/img/footer/footer-bg-3.png")}});">
         <div class="overly">
             <div class="container"></div>
         </div>
@@ -255,7 +267,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <a href="index.html" class="d-block mb-30 mb-xs-20">
-                    <img src="assets/img/logo/footer-logo.png" alt="" width="20%">
+                    <img src="{{asset("assets/img/logo/footer-logo.png")}}" alt="" width="20%">
                 </a>
                 <div class="col-md-6 col-xl-3">
                     <div class="single-footer-wid widget-description">
@@ -286,7 +298,7 @@
                         <div class="recent-post-list">
                             <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
                                 <div class="thumb">
-                                    <img src="assets/img/footer/resent-post-1.png" alt="">
+                                    <img src="{{asset("assets/img/footer/resent-post-1.png")}}" alt="">
                                 </div>
 
                                 <div class="post-data">
@@ -298,7 +310,7 @@
 
                             <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
                                 <div class="thumb">
-                                    <img src="assets/img/footer/resent-post-2.png" alt="">
+                                    <img src="{{asset("assets/img/footer/resent-post-2.png")}}" alt="">
                                 </div>
 
                                 <div class="post-data">
@@ -362,18 +374,32 @@
     <!-- footer end -->
     <!--  ALl JS Plugins
     ====================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.easing.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/scrollUp.min.js"></script>
-    <script src="assets/js/counterup.min.js"></script>
-    <script src="assets/js/jquery.sticky-kit.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.easypiechart.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/active.js"></script>
+{{--    <script src="assets/js/jquery.min.js"></script>--}}
+{{--    <script src="assets/js/bootstrap.bundle.min.js"></script>--}}
+{{--    <script src="assets/js/jquery.easing.js"></script>--}}
+{{--    <script src="assets/js/slick.min.js"></script>--}}
+{{--    <script src="assets/js/scrollUp.min.js"></script>--}}
+{{--    <script src="assets/js/counterup.min.js"></script>--}}
+{{--    <script src="assets/js/jquery.sticky-kit.js"></script>--}}
+{{--    <script src="assets/js/magnific-popup.min.js"></script>--}}
+{{--    <script src="assets/js/jquery.easypiechart.min.js"></script>--}}
+{{--    <script src="assets/js/jquery.waypoints.min.js"></script>--}}
+{{--    <script src="assets/js/wow.min.js"></script>--}}
+{{--    <script src="assets/js/active.js"></script>--}}
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.easing.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/scrollUp.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/counterup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.sticky-kit.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.easypiechart.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.waypoints.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/active.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/spa.js') }}"></script>
+
 
 </body>
 
