@@ -1,0 +1,30 @@
+
+    /*Styles to override parent layout's style*/
+label {
+    text-align: left !important; /* Override parent */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+.row-must-stay-left {
+    text-align: left !important; /* Override parent */
+    display: block;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #a71e38 !important;
+    border-color: #e4bbc2 !important;
+}
+
+@media (max-width: 768px) {
+    .contact-label {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .row svg {
+        display: none;
+    }
+}
+
