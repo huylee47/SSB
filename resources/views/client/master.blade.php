@@ -332,10 +332,8 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="single-footer-wid">
                         <h4 class="wid-title mb-30 color-white">Office Location</h4>
-                        <iframe
-                            src="{{$config->map}}"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {!! htmlspecialchars_decode($config->map) !!}
+
                     </div>
                 </div>
                 <!-- /.col-lg-3 - single-footer-wid -->

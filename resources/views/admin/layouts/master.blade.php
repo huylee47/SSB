@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ url('') }}/assets/css/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="{{ url('') }}/assets/css/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ url('') }}/assets/css/app.css">
+    <link rel="stylesheet" href="{{ url('') }}/assets/css/admin.css">
+
     {{-- <link rel="shortcut icon" href="{{ url('') }}/assets/images/favicon.svg" type="image/x-icon"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
@@ -30,9 +32,9 @@
             <div class="sidebar-wrapper active">
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
-                        <div class="logo">
-                            <a href="index.html"><img src="{{ url('') }}/assets/img/logo/logo.png"
-                                    alt="Logo" srcset=""></a>
+                        <div >
+                            <a href="{{route('index')}}"><img src="{{ url('') }}/assets/img/logo/logo.png"
+                                    alt="Logo"class="lgA" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i

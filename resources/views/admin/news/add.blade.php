@@ -78,7 +78,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="tags">Thẻ liên quan</label>
+                                        <label for="tags">khoá học liên quan</label>
                                         <select class="form-control selectpicker" id="tags" name="tags[]" multiple
                                             data-live-search="true">
                                             @foreach ($tags as $tag)

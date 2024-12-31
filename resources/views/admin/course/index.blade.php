@@ -11,13 +11,13 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-md-6 order-md-1 order-last">
-                        <h3>Thẻ</h3>
+                        <h3>khoá học</h3>
                     </div>
                     <div class="col-12 col-md-6 order-md-2 order-first">
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Danh sách thẻ</li>
+                                <li class="breadcrumb-item active" aria-current="page">Danh sách khoá học</li>
                             </ol>
                         </nav>
                     </div>
@@ -37,10 +37,10 @@
                             </div>
                         @endif
 
-                        {{-- Nút thêm thẻ --}}
-                        <a href="{{ route('admin.course.add') }}" class="btn btn-primary mb-3">Thêm thẻ</a>
+                        {{-- Nút thêm khoá học --}}
+                        <a href="{{ route('admin.course.add') }}" class="btn btn-primary mb-3">Thêm khoá học</a>
 
-                        {{-- Bảng danh sách thẻ --}}
+                        {{-- Bảng danh sách khoá học --}}
                         <table class="table table-striped table-bordered" id="table1">
                             <thead>
                                 <tr>
@@ -60,11 +60,14 @@
                                         <td>{{ $course->description }}</td>
                                         <td>{!! htmlspecialchars_decode($course->content) !!}</td>
                                         <td>
-                                            <img src="{{ url('') }}/assets/img/thumbnails/{{$course->thumbnail}}"style="width: 200px;">
+                                            <img
+                                                src="{{ url('') }}/assets/img/thumbnails/{{ $course->thumbnail }}"style="width: 200px;">
                                         </td>
                                         <td>
-                                            <a href="{{ route('admin.course.edit', ['id' => $course->id]) }}" class="btn btn-info btn-sm">Chỉnh sửa</a>
-                                            <a href="{{ route('admin.course.delete', ['id' => $course->id]) }}" class="btn btn-danger btn-sm">Xóa</a>
+                                            <a href="{{ route('admin.course.edit', ['id' => $course->id]) }}"
+                                                class="btn btn-info btn-sm">Chỉnh sửa</a>
+                                            <a href="{{ route('admin.course.delete', ['id' => $course->id]) }}"
+                                                class="btn btn-danger btn-sm">Xóa</a>
                                         </td>
                                     </tr>
                                 @endforeach
