@@ -10,13 +10,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, "index"]);
 
-Route::prefix('/')->group(function () {
-    Route::get('/login', [LoginController::class, 'index'])->name('login.view');
-    // Route::get('/login', function () {
-    //     return view('login');
-    // });
-
-    Route::post('/login/auth', [LoginController::class, 'login'])->name('login.auth');
+Route::prefix('/login')->group(function () {
+    Route::get('/', [LoginController::class, 'index'])->name('login');
+    Route::post('/auth', [LoginController::class, 'login'])->name('login.auth');
 });
 Route::middleware(['auth'])->group(function () {
     Route::prefix('/admin')->group(function () {

@@ -13,14 +13,10 @@ class Authentication
      * Handle an incoming request.
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  string  $role
      */
-    public function handle(Request $request, Closure $next , $role): Response
+    public function handle(Request $request, Closure $next, $role): Response
     {
-        $user = Auth::user();
-        
-        if (!$user || !$user->role || $user->role->role_name !== $role) {
-            return response()->json(['message' => 'Unauthorized'], 403);
-        }
         if (!Auth::check()) {
             return redirect()->route('login.view');
         }
