@@ -86,8 +86,8 @@ class ContactService {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'huyvhpp02961@fpt.edu.vn';
-            $mail->Password = 'ndbm jhvz lpbn twex';
+            $mail->Username = 'huyvhpp02961@fpt.edu.vn';//<-- PUT YOUR GOOGLE EMAIL HERE
+            $mail->Password = '';//<-- PUT YOUR GOOGLE APPLICATION PASSWORD HERE
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
