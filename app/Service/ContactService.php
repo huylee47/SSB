@@ -8,6 +8,7 @@ use App\Models\Config;
 use App\Models\Contact;
 use App\Models\Course;
 use http\Env\Request;
+use Illuminate\Database\QueryException;
 
 class ContactService {
     public function index(){
@@ -18,8 +19,16 @@ class ContactService {
 
     public function store(StoreContactRequest $request){
             $contactInfoAsArray = $request->all();
-            $createdContact = Contact::create($contactInfoAsArray);
-            return $createdContact;
+            try{
+                $createdContact = Contact::create($contactInfoAsArray);
+                return $createdContact;
+            }catch (QueryException $e){
+                if ($e->getCode() === '23000') { // SQLSTATE code for integrity constraint violation
+                    return response()->json(['message' => "Trùng email"], 409);
+                }
+                return response()->json(['message' => 'Database error'], 500);
+            }
+
     }
 
     public function create(Config $config)
