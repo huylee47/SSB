@@ -46,6 +46,7 @@ Route::prefix("config")->name("config.")->middleware(["auth"])->group(function (
 Route::prefix("contact")->name("contact.")->group(function (){
     Route::get("/create",[ContactController::class,"create"])->name("create");
     Route::post("/store",[ContactController::class,"store"])->name("store");
+    Route::get("",[ContactController::class,"index"])->name("index");
 });
 
 
