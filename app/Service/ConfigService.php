@@ -84,28 +84,32 @@ class ConfigService
         $originalConfig = Config::find($newConfig["id"]);
 
         //Setting up images manually. Should loop through $_File though
+
+
+        if ($request->hasFile('thumbnail')) {
+            $imageName = time(). '_'. uniqid(). '.'. $request->thumbnail->getClientOriginalExtension();
+            $request->thumbnail->move(public_path('assets/img/thumbnails'), $imageName);
+            $course->thumbnail = $imageName;
+        }
+
+
         if ($logo) {
-            //Store file to storage/app/private(why does it store in private?)
             $extension = $logo->extension();
-            $path = $logo->storeAs(
-                'config/logo', "logo" . $newConfig["id"] . "." . $extension
-            );
-            $newConfig['logo'] = $path;  // Add the file path to the new config
+            $fileName = time(). '_'. uniqid(). '.'. $extension;
+            $logo->move(public_path('assets/img/config'), $fileName);
+            $newConfig['logo'] = $fileName;
         } else {
             $newConfig['logo'] = $originalConfig->logo;
         }
 
         if ($favicon) {
-            //Store file to storage/app/public
             $extension = $favicon->extension();
-            $path = $favicon->storeAs(
-                'config/favicon', "favicon" . $newConfig["id"] . "." . $extension
-            );
-            $newConfig['favicon'] = $path;  // Add the file path to the new config
+            $fileName = time(). '_'. uniqid(). '.'. $extension;
+            $favicon->move(public_path('assets/img/config'), $fileName);
+            $newConfig['favicon'] = $fileName;
         } else {
             $newConfig['favicon'] = $originalConfig->favicon;
         }
-
         $updatedConfig = $config->update($newConfig);
         if ($updatedConfig) {
 //            Normally it returns json
