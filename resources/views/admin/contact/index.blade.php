@@ -43,7 +43,7 @@
                                     <th class="col-2">Địa chỉ Email</th>
                                     <th class="col-2">Số điện thoại</th>
                                     <th class="col-4">Tin nhắn</th>
-                                    <th class="col-2">Hành động</th>
+{{--                                    <th class="col-2">Hành động</th>--}}
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,13 +51,13 @@
                                     <tr>
                                         <td>{{ $contact->name }}</td>
                                         <td>{{ $contact->email }}</td>
-                                        <td>{{ $contact->phone }}</td>
+                                        <td>{{ $contact->phone_number }}</td>
                                         <td>{{ $contact->message }}</td>
-                                        <td class="text-center">
-                                            {{-- <a href="{{ route('admin.contact.hide', 1) }}" class="btn btn-info">Ẩn</a>
-                                            <a href="{{ route('admin.contact.edit', $contact->id) }}"
-                                                class="btn btn-warning">Sửa</a> --}}
-                                        </td>
+{{--                                        <td class="text-center">--}}
+{{--                                            --}}{{-- <a href="{{ route('admin.contact.hide', 1) }}" class="btn btn-info">Ẩn</a>--}}
+{{--                                            <a href="{{ route('admin.contact.edit', $contact->id) }}"--}}
+{{--                                                class="btn btn-warning">Sửa</a> --}}
+{{--                                        </td>--}}
                                     </tr>
                                 @endforeach
 

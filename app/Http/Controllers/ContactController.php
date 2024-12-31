@@ -23,7 +23,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        return $this->contactService->index();
     }
 
     /**
