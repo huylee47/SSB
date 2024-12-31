@@ -1,5 +1,9 @@
+@php $extends = $isSPA ? 'client.layouts.spa' : 'client.master'; @endphp
+{{--If page is loaded directly by another page( then no need to extends/or just extends to a dummy page)--}}
+{{--If page is loaded directly then extends to master layout--}}
 @extends($extends)
-@section($section)
+
+@section("content")
     {{--    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">--}}
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/bsb-overlay/bsb-overlay.css">
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/background/background.css">
