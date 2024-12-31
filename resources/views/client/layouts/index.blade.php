@@ -1,5 +1,8 @@
-@extends('client.master')
-@section('content')
+@php $extends = $isSPA ? 'client.layouts.spa' : 'client.master'; @endphp
+@extends($extends)
+{{--If page is loaded directly by another page( then no need to extends/or just extends to a dummy page)--}}
+{{--If page is loaded directly then extends to master layout--}}
+@section("content")
 <div>
     <div class="banner-home overflow-hidden pt-lg-100 pt-md-90 pt-sm-80 pt-xs-70">
         <div class="container">
