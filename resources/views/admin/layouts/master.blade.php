@@ -58,12 +58,21 @@
                             </a>
                         </li>
 
+                        <li class="sidebar-item  {{ request()->routeIs('contact.index') ? 'active' : '' }}">
+                            <a href="{{ route('contact.index') }}" class='sidebar-link'>
+                                <i class="bi bi-envelope"></i>
+                                <span>Danh sách liên hệ</span>
+                            </a>
+                        </li>
+
                         <li class="sidebar-item  {{ request()->routeIs('config.edit',"1") ? 'active' : '' }}">
                             <a href="{{ route('config.edit',"1") }}" class='sidebar-link'>
                                 <i class="bi bi-gear"></i>
                                 <span>Cấu hình hệ thống</span>
                             </a>
                         </li>
+
+
 
                         {{-- <li class="sidebar-item {{ request()->routeIs('admin.property.index') ? 'active' : '' }}">
                             <a href="{{ route('admin.property.index') }}" class='sidebar-link'>
