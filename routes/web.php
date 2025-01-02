@@ -58,7 +58,7 @@ Route::prefix("contact")->name("contact.")->group(function (){
     Route::get("",[ContactController::class,"index"])->name("index");
 });
 Route::prefix("/blog")->group(function () {
-    Route::get("", [BlogController::class, "index"])->name("blog.index");
+    Route::get("", [BlogController::class, "listBlogs"])->name("blog.index");
     Route::get("/{slug}", [BlogController::class, "show"])->name("blog.show");
 });
 
