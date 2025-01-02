@@ -26,6 +26,7 @@
         {
             "user_id": "1",
             "title": "Về chúng tôi",
+            "avatar": "1735780283_6775e7bb0fcad.png",
             "description": "trường kinh doanh và đào tạo",
             "content": "test"
         }
@@ -40,49 +41,49 @@
                 "title": "Marketing",
                 "description": "Khóa học marketing toàn diện",
                 "content": "Khám phá thế giới marketing đầy thú vị với khóa học chuyên sâu này.",
-                "thumbnail": "1.png"
+                "thumbnail": "1735780141_6775e72d022ef.png"
             },
             {
                 "title": "Digital Marketing",
                 "description": "Tìm hiểu về marketing trong thời đại số",
                 "content": "Khám phá các kênh marketing online hiệu quả như SEO, SEM, Social Media Marketing.",
-                "thumbnail": "2.png"
+                "thumbnail": "1735780172_6775e74c5ee58.png"
             },
             {
                 "title": "Marketing B2B",
                 "description": "Tìm hiểu về marketing cho doanh nghiệp",
                 "content": "Khám phá các chiến lược và kỹ thuật marketing hiệu quả để tiếp cận khách hàng doanh nghiệp.",
-                "thumbnail": "3.png"
+                "thumbnail": "1735780196_6775e76459484.png"
             },
             {
                 "title": "Content Marketing",
                 "description": "Tạo nội dung hấp dẫn để thu hút khách hàng",
                 "content": "Học cách tạo ra nội dung chất lượng cao để thu hút và giữ chân khách hàng.",
-                "thumbnail": "4.png"
+                "thumbnail": "1735780220_6775e77cdaa56.png"
             },
             {
                 "title": "Marketing Truyền Thông Xã Hội",
                 "description": "Tối ưu hóa hoạt động marketing trên các nền tảng mạng xã hội",
                 "content": "Học cách xây dựng thương hiệu, tăng tương tác và đạt được mục tiêu kinh doanh trên Facebook, Instagram, TikTok, v.v.",
-                "thumbnail": "5.png"
+                "thumbnail": "1735780237_6775e78dc3657.png"
             },
             {
                 "title": "Marketing Email",
                 "description": "Xây dựng danh sách email và gửi chiến dịch email hiệu quả",
                 "content": "Học cách tạo ra các chiến dịch email hấp dẫn, tăng tỷ lệ mở thư và chuyển đổi khách hàng.",
-                "thumbnail": "6.png"
+                "thumbnail": "1735780253_6775e79da77c1.png"
             },
             {
                 "title": "SEO - Tối ưu hóa công cụ tìm kiếm",
                 "description": "Nâng cao thứ hạng website trên kết quả tìm kiếm của Google",
                 "content": "Học các kỹ thuật SEO on-page, off-page để giúp website của bạn dễ dàng được tìm thấy bởi người dùng.",
-                "thumbnail": "7.png"
+                "thumbnail": "1735780264_6775e7a83aee0.png"
             },
             {
                 "title": "Quảng cáo Google Ads",
                 "description": "Tạo và quản lý chiến dịch quảng cáo Google Ads hiệu quả",
                 "content": "Học cách sử dụng Google Ads để tiếp cận đúng đối tượng khách hàng và đạt được mục tiêu kinh doanh.",
-                "thumbnail": "8.png"
+                "thumbnail": "1735780283_6775e7bb0fcad.png"
             }
     ]
 }
