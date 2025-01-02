@@ -47,7 +47,7 @@
                                     @csrf
                                     <label for="">Ảnh bìa khoá học</label>
                                     <div class="mb-3">
-                                        <input type="file" accept="image/*" class="custom-file-input" id="customFile"
+                                        <input type="file" accept="image/*" class="form-control" id="customFile"
                                             name="thumbnail" value="{{ $course->thumbnail }}">
                                     </div>
                                     <div class="mb-3">

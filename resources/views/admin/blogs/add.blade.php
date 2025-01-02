@@ -11,7 +11,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-md-6 order-md-1 order-last">
-                        <h3>Sửa tin tức</h3>
+                        <h3>Thêm mới tin tức</h3>
                     </div>
                     <div class="col-12 col-md-6 order-md-2 order-first">
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -47,7 +47,7 @@
                                     @csrf
                                     <label for="">Ảnh bìa </label>
                                     <div class="mb-3">
-                                        <input type="file" accept="image/*" class="custom-file-input" id="customFile"
+                                        <input type="file" accept="image/*" class="form-control" id="customFile"
                                             name="avatar" >
                                     </div>
                                     <div class="mb-3">

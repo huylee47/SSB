@@ -1245,89 +1245,39 @@
 
                 <div class="blog-news__bottom mt-60 mt-sm-50 mt-xs-40">
                     <div class="row mb-minus-30">
-                        <div class="col-xl-4 col-md-6 col-12">
+                        @foreach($blogs as $blog)
+                            <div class="col-xl-4 col-md-6 col-12">
                             <div class="blog-item blog-item-three mb-30 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="blog-featured-thumb mb-xs-30 mb-sm-30 mb-md-35 mb-lg-40 mb-50">
                                     <div class="media overflow-hidden">
-                                        <img src="assets/img/blog/blog-15.jpg" class="img-fluid" alt="">
+                                        <img src="assets/img/blog/{{$blog->avatar}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="date">
-                                        <span>27</span>
-                                        <span>April</span>
-                                        <span>2020</span>
+                                        <span>{{ $blog->created_at->translatedFormat('d') }}</span>
+                                        <span>{{ $blog->created_at->translatedFormat('F') }}</span>
+                                        <span>{{ $blog->created_at->translatedFormat('Y') }}</span>
                                     </div>
                                 </div>
 
                                 <div class="content pr-sm-25 pr-xs-15 pl-xs-15 pl-sm-25 pr-xs-15 pr-30 pb-30 pl-30">
                                     <div class="post-author mb-5">
-                                        <a href="blog.html">Business, Consulting</a>
+                                        <a href="blog.html">{{$blog->User->name}}</a>
                                     </div>
 
-                                    <h4><a href="blog.html">Consulted admitting wooded is power acuteness</a></h4>
+                                    <h4><a href="blog.html">{{$blog->title}}</a></h4>
+                                    <h6>
+                                        <span><a href="blog.html">{{$blog->description}}</span>
+                                    </h6>
 
                                     <div class="btn-link-share mt-xs-10 mt-sm-10 mt-15">
-                                        <a href="blog.html" class="theme-btn btn-border">Read More <i
+                                        <a href="blog.html" class="theme-btn btn-border">Đọc thêm <i
                                                 class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-xl-4 col-md-6 col-12">
-                            <div class="blog-item blog-item-three mb-30 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="blog-featured-thumb mb-xs-30 mb-sm-30 mb-md-35 mb-lg-40 mb-50">
-                                    <div class="media overflow-hidden">
-                                        <img src="assets/img/blog/blog-16.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="date">
-                                        <span>15</span>
-                                        <span>March</span>
-                                        <span>2021</span>
-                                    </div>
-                                </div>
-
-                                <div class="content pr-sm-25 pr-xs-15 pl-xs-15 pl-sm-25 pr-xs-15 pr-30 pb-30 pl-30">
-                                    <div class="post-author mb-5">
-                                        <a href="blog.html">Business, Consulting</a>
-                                    </div>
-
-                                    <h4><a href="blog.html">Consulted admitting wooded is power acuteness</a></h4>
-
-                                    <div class="btn-link-share mt-xs-10 mt-sm-10 mt-15">
-                                        <a href="blog.html" class="theme-btn btn-border">Read More <i
-                                                class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-md-6 col-12">
-                            <div class="blog-item blog-item-three mb-30 wow fadeInUp" data-wow-delay=".7s">
-                                <div class="blog-featured-thumb mb-xs-30 mb-sm-30 mb-md-35 mb-lg-40 mb-50">
-                                    <div class="media overflow-hidden">
-                                        <img src="assets/img/blog/blog-17.jpg" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="date">
-                                        <span>24</span>
-                                        <span>Sept</span>
-                                        <span>2022</span>
-                                    </div>
-                                </div>
-
-                                <div class="content pr-sm-25 pr-xs-15 pl-xs-15 pl-sm-25 pr-xs-15 pr-30 pb-30 pl-30">
-                                    <div class="post-author mb-5">
-                                        <a href="blog.html">Business, Consulting</a>
-                                    </div>
-
-                                    <h4><a href="blog.html">Consulted admitting wooded is power acuteness</a></h4>
-
-                                    <div class="btn-link-share mt-xs-10 mt-sm-10 mt-15">
-                                        <a href="blog.html" class="theme-btn btn-border">Read More <i
-                                                class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        @endforeach
                     </div>
                 </div>
             </div>
