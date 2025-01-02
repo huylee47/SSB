@@ -116,7 +116,7 @@
                                             <a href="#">Khoá học</a>
                                         </li>
                                         <li>
-                                            <a href="#">Tin tức</a>
+                                            <a href="{{route('blog.index')}}">Tin tức</a>
                                         </li>
                                         <li>
                                             <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
@@ -179,7 +179,7 @@
                                     <a href="#">Khoá học</a>
                                 </li>
                                 <li>
-                                    <a href="#">Tin tức</a>
+                                    <a href="{{route('blog.index')}}">Tin tức</a>
                                 </li>
                                 <li>
                                     <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
