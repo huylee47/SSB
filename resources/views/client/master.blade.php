@@ -116,7 +116,7 @@
                                             <a href="#">Khoá học</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('blog.index')}}">Tin tức</a>
+                                            <a href="#">Tin tức</a>
                                         </li>
                                         <li>
                                             <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
@@ -179,7 +179,7 @@
                                     <a href="#">Khoá học</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('blog.index')}}">Tin tức</a>
+                                    <a href="#">Tin tức</a>
                                 </li>
                                 <li>
                                     <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
@@ -211,6 +211,7 @@
 
                     <div class="sidebar-nav__bottom-social">
                         <h6 class="color-black mb-5">Follow On:</h6>
+
                         <ul>
                             <li><a href="{{$config->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
