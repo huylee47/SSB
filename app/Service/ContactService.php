@@ -59,6 +59,14 @@ class ContactService {
             $isSPA=true;
         }
 
+        $html = $config->map;
+        preg_match('/<iframe[^>]+src="([^"]+)"/', $html, $matches);
+        if (isset($matches[1])) {
+            $config->map=$matches[1];
+        } else {
+            $config->map="";
+        }
+
         return view("client.contact.create", compact("contact", "config", "courses","isSPA"));
 
     }
