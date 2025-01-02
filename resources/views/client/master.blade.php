@@ -98,7 +98,7 @@
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-between">
                                 <div class="logo">
-                                    <a  href="{{route("home")}}">
+                                    <a  href="{{route("index")}}">
                                         <img src="{{asset("assets/img/logo/logo.png")}}" alt="logo" width="20%">
                                     </a>
                                 </div>
@@ -192,9 +192,8 @@
                         <h6 class="color-black mb-5">thông tin liên hệ</h6>
 
                         <ul>
-                            <li><a><i class="fal fa-clock"></i> Mon – Fri: 8.00 – 18.00</a></li>
-                            <li><a href="mailto:consulter@example.com"><i
-                                        class="icon-email"></i>consulter@example.com</a></li>
+                            <li><a href="mailto:{{$config->email}}"><i
+                                        class="icon-email"></i>{{$config->email}}</a></li>
                             <li>
                                 <a class="header-contact d-flex align-items-center">
                                     <div class="icon">
@@ -203,7 +202,7 @@
                                     </div>
                                     <div class="text">
                                         <span class="font-la mb-5 d-block fw-500">Contact For Support</span>
-                                        <h5 class="fw-500">+123 556 8824</h5>
+                                        <h5 class="fw-500">{{$config->hotline}}</h5>
                                     </div>
                                 </a>
                             </li>
@@ -343,7 +342,7 @@
 
                 <div class="col-md-6 col-xl-3">
                     <div class="single-footer-wid">
-                        <h4 class="wid-title mb-30 color-white">Office Location</h4>
+                        <h4 class="wid-title mb-30 color-white">Trụ sở chính</h4>
                         {!! htmlspecialchars_decode($config->map) !!}
 
                     </div>
@@ -357,8 +356,8 @@
                 <div
                     class="footer-bottom-content d-flex flex-column flex-md-row justify-content-between align-items-center">
                     <div class="coppyright text-center text-md-start">
-                       Copyright © 2023  | All Rights Reserved by <a
-                            href="">OuranSoft</a>
+                       Copyright © 2024  | All Rights Reserved by <a
+                            href="https://ouransoft.vn">OuranSoft</a>
                     </div>
 
                     <div class="footer-bottom-list last_no_bullet">

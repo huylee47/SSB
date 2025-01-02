@@ -276,10 +276,7 @@
                             <div class="card-outside">
                                 <div class="card-icon d-flex justify-content-center align-items-center">
                                     <img
-                                        src="{{URL::asset($course->img)}}"
-                                        alt="{{$course->title}}"
-                                        onerror="this.parentNode.innerHTML=this.alt;"
-                                        class="img-fluid rounded-circle w-100 h-100 object-fit-cover overflow-hidden"
+                                    src="{{ url('') }}/assets/img/thumbnails/{{ $course->thumbnail }}"        
                                     />
                                 </div>
                             </div>
