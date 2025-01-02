@@ -54,11 +54,8 @@ class ContactService {
         $contact = new Contact();
         $contact = new ContactResource($contact);
         $courses = Course::all();
-        //        $section = "content";
-//        $extends="client.master";
         $isSPA=false;
         if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest') {
-//            $extends="client.layouts.spa";//Dummy extends if page already called by master layout
             $isSPA=true;
         }
 

@@ -419,8 +419,8 @@ button {
 }
 @font-face {
     font-family: "Lato";
-    src: url("assets/fonts/Lato-Semibold.woff2") format("woff2"),
-        url("assets/fonts/Lato-Semibold.woff") format("woff");
+    src: url("../fonts/Lato-Semibold.woff2") format("woff2"),
+        url("../fonts/Lato-Semibold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -18493,7 +18493,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     height: 187.32px;
     position: absolute;
     background-repeat: no-repeat;
-    background-image: url(assets/img/cta/cta-arrow.png);
+    background-image: url(..//img/cta/cta-arrow.png);
     animation-duration: 3s;
     animation-name: movebounce;
     animation-iteration-count: infinite;

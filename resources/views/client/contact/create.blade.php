@@ -1,246 +1,237 @@
 @php $extends = $isSPA ? 'client.layouts.spa' : 'client.master'; @endphp
-{{--If page is loaded directly by another page( then no need to extends/or just extends to a dummy page)--}}
-{{--If page is loaded directly then extends to master layout--}}
 @extends($extends)
 
 @section("content")
-    {{--    <link rel="stylesheet" href="{{asset("assets/css/bootstrap.min.css")}}">--}}
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/bsb-overlay/bsb-overlay.css">
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/background/background.css">
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/margin/margin.css">
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
-    <link rel="stylesheet" href="{{asset("assets/css/views/contact/create.css")}}">
-    <script src="{{asset("assets/js/jquery.min.js")}}"></script>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dev_raj">
+    <!-- ======== Page title ============ -->
+    <title>CONSULTER - Business Consulting HTML Template</title>
+    <!-- ===========  All Stylesheet ================= -->
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{asset("assets/css/vendors/sweetalert2/sweetalert2.all.min.js")}}"></script>
     <script src="{{asset("assets/js/views/contact/create.js")}}"></script>
+    <link rel="stylesheet" href="{{asset("assets/css/views/contact/create.css")}}">
+    <!-- preloader start -->
 
 
-    <section class="py-3 py-md-5 py-xl-8  " style="text-align: left;">
-        <div>
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                    <h2 class="mb-4 display-5 text-center">Bạn cần tư vấn</h2>
-                    <p class="text-secondary mb-5 text-center lead fs-4">Chúng tôi luôn sẵn sàng đáp ứng
-                        và trả lời mọi thắc mắc. Bạn có thể liên hệ với chúng tôi qua điện thoại, email,
-                        hoặc bằng cách điền vào mẫu liên hệ dưới đây.
-                    </p>
-                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+    <!-- page-banner start -->
+    <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="page-banner__content mb-xs-10 mb-sm-15 mb-md-15 mb-20">
+                        <div class="transparent-text">Liên hệ</div>
+                        <div class="page-title">
+                            <h1>Liên hệ <span>với chúng tôi</span></h1>
+                        </div>
+                    </div>
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{route("index")}}">Trang chủ</a></li>
+                            <li data-spa class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="page-banner__media mt-xs-30 mt-sm-40">
+                        <img src="{{asset("assets/img/page-banner/page-banner-start.svg")}}" class="img-fluid start"
+                             alt="">
+                        <img src="{{asset("assets/img/page-banner/page-banner-1.jpg")}}" class="img-fluid" alt="">
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- page-banner end -->
 
-        <div>
+    <!-- contact-us start -->
+    <section class="contact-us pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
+        <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="card border border-dark rounded shadow-sm overflow-hidden ">
-                        <div class="card-body p-0">
-                            <div class="row gy-3 gy-md-4 gy-lg-0">
+                <div class="col-lg-6">
+                    <div class="contact-us__content wow fadeInUp" data-wow-delay=".3s">
+                        <h6 class="sub-title fw-500 color-primary text-uppercase mb-sm-15 mb-xs-10 mb-20"><img
+                                src="{{asset("assets/img/team-details/badge-line.svg")}}" class="img-fluid mr-10"
+                                alt=""> Liên hệ dễ dàng</h6>
+                        <h2 class="title color-d_black mb-sm-15 mb-xs-10 mb-20">Khởi tạo liên kết</h2>
+
+                        <div class="description font-la">
+                            <p>Chúng tôi luôn sẵn sàng đáp ứng
+                                và trả lời mọi thắc mắc. Bạn có thể liên hệ với chúng tôi qua điện thoại, email,
+                                hoặc bằng cách điền vào mẫu liên hệ dưới đây.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row contact-us__item-wrapper mt-xs-35 mt-sm-40 mt-md-45">
+                        <div class="col-sm-6">
+                            <div class="contact-us__item mb-40 wow fadeInUp" data-wow-delay=".3s">
                                 <div
-                                    class="col-12 col-lg-6 bsb-overlay background-position-center background-size-cover"
-                                    style="--bsb-overlay-opacity: 0.7; background-image: url('./assets/img/contact-img-1.webp');">
-                                    <div class="row align-items-lg-center justify-content-center h-100">
-                                        <div class="col-11 col-xl-10">
-                                            <div class="contact-info-wrapper py-4 py-xl-5">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <h2 class="h1 mb-3 text-light">Liên hệ với chúng tôi</h2>
-                                                        <p class="lead fs-4 text-light opacity-75 mb-5 mb-xxl-4">Chúng
-                                                            tôi luôn liên tục tìm kiếm các khách hàng mới.
-                                                            Nếu bạn có hứng thú làm việc với chúng tôi, vui lòng liên hệ
-                                                            theo một trong những cách sau.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="row-must-stay-left">
-                                                    <div class="row">
-                                                        <div class="col-md-1 me-4 text-primary">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                 width="32" height="32"
-                                                                 fill="currentColor" class="bi bi-geo"
-                                                                 viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd"
-                                                                      d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            <h4 class="mb-3 text-light contact-label">Địa chỉ</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-3">
-                                                        <div class="col-md-1 me-4 text-primary">
-                                                        </div>
-                                                        <div class="col-md-10 contact-label">
-                                                            <address
-                                                                class="mb-0 text-light opacity-75 contact-label">{{$config->address}}</address>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row-must-stay-left">
-                                                    <div class="row">
-                                                        <div class="me-4 text-primary col-1">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                                                 height="32" fill="currentColor"
-                                                                 class="bi bi-telephone-outbound" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            <h4 class="mb-3 text-light contact-label">Số điện thoại</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-4">
-                                                        <div class="me-4 text-primary col-md-1"></div>
-                                                        <div class="col-md-10 contact-label">
-                                                            <p class="mb-0 contact-label">
-                                                                <a class="link-light link-opacity-75 link-opacity-100-hover text-decoration-none contact-label"
-                                                                   href="tel:+15057922430">{{$config->hotline}}</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row-must-stay-left">
-                                                    <div class="row">
-                                                        <div class="me-4 text-primary col-md-1">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                                                 height="32"
-                                                                 fill="currentColor" class="bi bi-envelope-at"
-                                                                 viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
-                                                                <path
-                                                                    d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            <h4 class="mb-3 text-light contact-label">E-Mail</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-3">
-                                                        <div class="me-4 text-primary col-md-1"></div>
-                                                        <p class="mb-0 col-md-10 contact-label">
-                                                            <a class="link-light link-opacity-75 link-opacity-100-hover text-decoration-none contact-label"
-                                                               href="mailto:{{$config->email}}">{{$config->email}}</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row-must-stay-left">
-                                                    <div class="row">
-                                                        <div class="me-4 text-primary col-md-1">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                                                 height="32"
-                                                                 fill="currentColor" class="bi bi-alarm"
-                                                                 viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
-                                                                <path
-                                                                    d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            <h4 class="mb-3 text-light contact-label">Giờ hoạt động</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-0">
-                                                        <div class="me-4 text-primary col-md-1 col-xs-1"></div>
-                                                        <div class="col-md-4 col-xs-7 contact-label"><p
-                                                                class="text-light fw-bold mb-0 me-0 contact-label">
-                                                                Monday
-                                                                - Friday</p></div>
-                                                        <div class="col-md contact-label"><p
-                                                                class="text-light opacity-75 mb-0 contact-label">9am -
-                                                                5pm</p></div>
-                                                    </div>
-                                                    <div class="row mb-0">
-                                                        <div class="me-4 text-primary col-md-1"></div>
-                                                        <div class="col-md-4 contact-label"><p
-                                                                class="text-light fw-bold mb-0 me-0 contact-label">
-                                                                Saturday</p></div>
-                                                        <div class="col-md"><p
-                                                                class="text-light opacity-75 mb-0 contact-label">9am -
-                                                                3pm</p></div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
+                                    class="contact-us__item-header mb-25 mb-md-20 mb-sm-15 mb-xs-10 d-flex align-items-center">
+                                    <div class="icon mr-10 color-primary">
+                                        <i class="fal fa-map-marker-alt"></i>
                                     </div>
+
+                                    <h5 class="title color-d_black">Trụ sở chính</h5>
                                 </div>
-                                <div class="col-12 col-lg-6">
-                                    <div class="row align-items-lg-center h-100">
-                                        <div class="col-12">
-                                            <form
-                                                id="contactForm"
-                                                method="post"
-                                                action="{{route("contact.store")}}"
-                                            >
-                                                @csrf
 
-                                                <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                                                    <div class="col-12">
-                                                        <label for="name" class="form-label text-start">Họ và tên <span
-                                                                class="text-danger">*</span></label>
-                                                        <input type="text" class="form-control" id="name" name="name"
-                                                               value="{{$contact->name}}" required>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <label for="email" class="form-label">Email <span
-                                                                class="text-danger">*</span></label>
-                                                        <div class="input-group">
-                            <span class="input-group-text">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                   class="bi bi-envelope" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                              </svg>
-                            </span>
-                                                            <input type="email" class="form-control" id="email"
-                                                                   name="email" value="{{$contact->email}}" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <label for="phone_number" class="form-label">Số điện
-                                                            thoại</label>
-                                                        <div class="input-group">
-                            <span class="input-group-text">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                   class="bi bi-telephone" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                              </svg>
-                            </span>
-                                                            <input type="text" class="form-control" id="phone_number"
-                                                                   name="phone_number"
-                                                                   value="{{$contact->phone_number}}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <label for="message" class="form-label">Tin nhắn <span
-                                                                class="text-danger">*</span></label>
-                                                        <textarea class="form-control" id="message" name="message"
-                                                                  rows="3" required>{{$contact->message}}</textarea>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="d-grid">
-                                                            <button id="submit" class="btn btn-primary btn-lg" type="submit">Gửi
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                                <div class="contact-us__item-body font-la">
+                                    {{$config->address}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="contact-us__item mb-40 wow fadeInUp" data-wow-delay=".5s">
+                                <div
+                                    class="contact-us__item-header mb-25 mb-md-20 mb-sm-15 mb-xs-10 d-flex align-items-center">
+                                    <div class="icon mr-10 color-primary">
+                                        <i class="icon-home-location"></i>
                                     </div>
+
+                                    <h5 class="title color-d_black">Chi nhánh</h5>
+                                </div>
+
+                                <div class="contact-us__item-body font-la">
+                                    {{$config->address}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="contact-us__item mb-40 wow fadeInUp" data-wow-delay=".7s">
+                                <div
+                                    class="contact-us__item-header mb-25 mb-md-20 mb-sm-15 mb-xs-10 d-flex align-items-center">
+                                    <div class="icon mr-10 color-primary">
+                                        <i class="icon-phone"></i>
+                                    </div>
+
+                                    <h5 class="title color-d_black">Liên hệ miễn cước</h5>
+                                </div>
+
+                                <div class="contact-us__item-body font-la">
+                                    <ul>
+                                        <li><a href="tel:{{$config->hotline}}">{{$config->hotline}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="contact-us__item mb-40 wow fadeInUp" data-wow-delay=".9s">
+                                <div
+                                    class="contact-us__item-header mb-25 mb-md-20 mb-sm-15 mb-xs-10 d-flex align-items-center">
+                                    <div class="icon mr-10 color-primary">
+                                        <i class="icon-email"></i>
+                                    </div>
+
+                                    <h5 class="title color-d_black">Địa chỉ hòm thư</h5>
+                                </div>
+
+                                <div class="contact-us__item-body font-la">
+                                    <ul>
+                                        <li><a href="mailto:{{$config->email}}">{{$config->email}} </a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <hr class="mt-md-45 mt-sm-30 mt-xs-30 mt-60">
+                </div>
+            </div>
         </div>
     </section>
+    <!-- contact-us end -->
+
+    <!-- contact-us form end -->
+    <section class="contact-form  mb-xs-80 mb-sm-100 mb-md-100 mb-120 overflow-hidden">
+        <div id="contact-map" class="mb-sm-30 mb-xs-25">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.6288889943407!2d89.24179957479988!3d24.008878578805188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9bfb7d4038fb%3A0x2e698dd3196ad36f!2sRRDevs!5e0!3m2!1sen!2sbd!4v1707636832892!5m2!1sen!2sbd"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- contact-map -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="contact-form pt-md-30 pt-sm-25 pt-xs-20 pb-md-40 pb-sm-35 pb-xs-30 pt-xl-30 pb-xl-50 pt-45 pr-xl-50 pl-md-40 pl-sm-30 pl-xs-25 pr-md-40 pr-sm-30 pr-xs-25 pl-xl-50 pr-85 pb-60 pl-85 wow fadeInUp"
+                        data-wow-delay=".3s">
+                        <div class="contact-form__header mb-sm-35 mb-xs-30 mb-40">
+                            <h6 class="sub-title fw-500 color-primary text-uppercase mb-15"><img
+                                    src="{{asset("assets/img/team-details/badge-line.svg")}}" class="img-fluid mr-10"
+                                    alt=""> Bạn cần trợ giúp?</h6>
+                            <h3 class="title color-d_black">Liên hệ với chúng tôi</h3>
+                        </div>
+
+                        <form
+                            id="contactForm"
+                            method="post"
+                            action="{{route("contact.store")}}"
+                        >
+                            @csrf
+                            <div class="single-personal-info">
+                                <input name="name" value="{{$contact->name}}" type="text" id="fname" placeholder="Họ và Tên"
+                                       required>
+                            </div>
+                            <div class="single-personal-info">
+                                <input name="email" value="{{$contact->email}}" type="email" id="email" placeholder="E-mail"
+                                       required>
+                            </div>
+                            <div class="single-personal-info">
+                                <input name="phone_number" value="{{$contact->phone_number}}" type="tel" placeholder="Số điện thoại"
+                                       required>
+                            </div>
+                            <div class="single-personal-info">
+                                <textarea name="message" placeholder="Tin nhắn" required> {{$contact->message}}</textarea>
+                            </div>
+                            <div class="text-start">
+                                <button type="submit" class=" theme-btn btn-sm">Gửi tin nhắn<i
+                                        class="far fa-chevron-double-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact-us form end -->
+
+    <!-- cta start -->
+    <section class="cta-banner overflow-hidden mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="cta-banner__content d-flex flex-column flex-lg-row justify-content-between align-items-center pl-xs-20  pr-xs-20 pl-sm-30  pr-sm-30 pl-lg-50 pr-lg-50 pr-85 pl-85 overflow-hidden">
+                        <div class="cta-banner__content-text wow fadeInUp" data-wow-delay=".3s">
+                            <h3 class="title text-capitalize color-white">Cung cấp các giải pháp thúc đẩy tăng trưởng
+                                các doanh nghiệp</h3>
+                        </div>
+                        <div class="cta-banner__content-btn wow fadeInUp" data-wow-delay=".3s">
+                            <a href="contact.html" class="theme-btn btn-white">Hợp Tác Để Thành Công<i
+                                    class="far fa-chevron-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta start -->
+    <!--  ALl JS Plugins
+    ====================================== -->
 
 @stop
