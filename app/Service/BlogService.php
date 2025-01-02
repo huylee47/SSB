@@ -3,12 +3,13 @@
 namespace App\Service;
 
 use App\Models\Blog;
+use App\Models\Config;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 class BlogService{
     public function index(){
-        $blogs = Blog::all();
-        return view('admin.blogs.index',compact('blogs'));
+       $blogs = Blog::all();
+       return $blogs;
     }
     public function create(){
         return view('admin.blogs.add');
@@ -60,6 +61,17 @@ class BlogService{
     // Client 
     public function show($slug){
         $blog = Blog::where('slug', $slug)->first();
-        return view('blogs.detail',compact('blog'));
+        $config = Config::first();
+        $recentBlogs = $this->RecentBlog();
+        return view('client.blog.detail',compact('blog','config','recentBlogs'));
+    }
+    public function RecentBlog(){
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        return $blogs;
+    }
+    public function listBlogs(){
+        $blogs = Blog::paginate(9);
+        $config = Config::first();
+        return view('client.blog.index',compact('blogs','config'));
     }
 }
