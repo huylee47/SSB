@@ -83,6 +83,7 @@
                                 <input accept=".jpg,.gif,.png,.heic" id="logo" type="file" class="form-control"
                                     name="logo" value="{{ $config->logo }}">
                                 <div>
+                                    <br>
                                     <label for="logo">Logo hiện tại : </label>
                                     <img src="{{ url('') }}/assets/img/logo/{{ $config->logo }}" width="40%"
                                         alt="">
@@ -93,8 +94,9 @@
                                 <label for="favicon">Link Favicon</label>
                                 <input accept=".ico,.icon" id="favicon" type="file" class="form-control" name="favicon"
                                     value="{{ $config->favicon }}">
+                                    <br>
                                     <label for="logo">Favicon hiện tại : </label>
-                                    <img src="{{ url('') }}/assets/img/icon/{{ $config->favicon }}" width="40%"
+                                    <img src="{{ url('') }}/assets/img/icon/{{ $config->favicon }}" width="20%"
                                         alt="">
                             </div>
                         </div>
