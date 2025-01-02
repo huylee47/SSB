@@ -54,14 +54,15 @@ class ContactService {
         $contact = new Contact();
         $contact = new ContactResource($contact);
         $courses = Course::all();
-        $section = "content";
-        $extends="client.master";
+        //        $section = "content";
+//        $extends="client.master";
+        $isSPA=false;
         if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest') {
-            $extends="client.contact.spa";//Dummy extends if page already called by master layout
+//            $extends="client.layouts.spa";//Dummy extends if page already called by master layout
+            $isSPA=true;
         }
-        //Send email here
 
-        return view("client.contact.create", compact("contact", "config", "courses","extends","section"));
+        return view("client.contact.create", compact("contact", "config", "courses","isSPA"));
 
     }
 

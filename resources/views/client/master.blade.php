@@ -107,7 +107,7 @@
                                 <div class="main-menu">
                                     <ul>
                                         <li>
-                                            <a href="#">Trang chủ</a>
+                                            <a data-spa href="{{route("home")}}">Trang chủ</a>
                                         </li>
                                         <li>
                                             <a href="#">Giới thiệu</a>
@@ -170,7 +170,7 @@
                             <a href="#">Home</a>
                             <ul>
                                 <li>
-                                    <a href="#">Trang chủ</a>
+                                    <a data-spa href="{{route("home")}}">Trang chủ</a>
                                 </li>
                                 <li>
                                     <a href="#">Giới thiệu</a>
@@ -182,7 +182,7 @@
                                     <a href="#">Tin tức</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('contact.create')}}">Liên hệ</a>
+                                    <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
                                 </li>
                             </ul>
                 </div>
