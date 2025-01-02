@@ -107,7 +107,7 @@
                                 <div class="main-menu">
                                     <ul>
                                         <li>
-                                            <a data-spa href="{{route("home")}}">Trang chủ</a>
+                                            <a data-spa href="{{route("index")}}">Trang chủ</a>
                                         </li>
                                         <li>
                                             <a href="#">Giới thiệu</a>
@@ -170,7 +170,7 @@
                             <a href="#">Home</a>
                             <ul>
                                 <li>
-                                    <a data-spa href="{{route("home")}}">Trang chủ</a>
+                                    <a data-spa href="{{route("index")}}">Trang chủ</a>
                                 </li>
                                 <li>
                                     <a href="#">Giới thiệu</a>
@@ -211,7 +211,6 @@
 
                     <div class="sidebar-nav__bottom-social">
                         <h6 class="color-black mb-5">Follow On:</h6>
-
                         <ul>
                             <li><a href="{{$config->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>

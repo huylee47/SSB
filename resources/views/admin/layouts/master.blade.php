@@ -52,7 +52,12 @@
                                 <span>Dashboard</span>
                             </a>
                         </li>
-
+                        <li class="sidebar-item {{ request()->routeIs('admin.blog.index') ? 'active' : '' }}">
+                            <a href="{{ route('admin.blog.index') }}" class='sidebar-link'>
+                                <i class="bi bi-newspaper"></i>
+                                <span>Tin tức</span>
+                            </a>
+                        </li>
                         <li class="sidebar-item {{ request()->routeIs('admin.course.index') ? 'active' : '' }}">
                             <a href="{{ route('admin.course.index') }}" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>

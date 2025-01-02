@@ -65,9 +65,9 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('admin.course.edit', ['id' => $course->id]) }}"
-                                                class="btn btn-info btn-sm">Chỉnh sửa</a>
+                                                class="btn btn-info">Chỉnh sửa</a>
                                             <a href="{{ route('admin.course.delete', ['id' => $course->id]) }}"
-                                                class="btn btn-danger btn-sm">Xóa</a>
+                                                class="btn btn-danger">Xóa</a>
                                         </td>
                                     </tr>
                                 @endforeach
