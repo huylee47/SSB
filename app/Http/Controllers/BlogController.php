@@ -17,7 +17,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return $this->blogService->index();
+        $blogs = $this->blogService->index();
+        return view('admin.blogs.index',compact('blogs'));
+
     }
 
     /**
@@ -65,5 +67,8 @@ class BlogController extends Controller
     public function show($slug)
     {
         return $this->blogService->show($slug);
+    }
+    public function listBlogs(){
+        return $this->blogService->listBlogs();
     }
 }
