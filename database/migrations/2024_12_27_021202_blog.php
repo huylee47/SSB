@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('title');
+            $table->string('avatar');
             $table->text('description');
             $table->text('content');
+            $table->string('slug')->nullable();
             $table->softDeletes();
             $table->timestamps();
-
         });
     }
 

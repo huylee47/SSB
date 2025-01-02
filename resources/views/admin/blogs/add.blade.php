@@ -11,13 +11,13 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-12 col-md-6 order-md-1 order-last">
-                        <h3>Sửa khoá học</h3>
+                        <h3>Thêm mới tin tức</h3>
                     </div>
                     <div class="col-12 col-md-6 order-md-2 order-first">
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Sửa khoá học</li>
+                                <li class="breadcrumb-item active" aria-current="page">Sửa tin tức</li>
                             </ol>
                         </nav>
                     </div>
@@ -41,30 +41,30 @@
                                     </div>
                                 @endif
 
-                                {{-- Form Sửa khoá học --}}
-                                <form action="{{ route('admin.course.update', ['id' => $course->id]) }}" method="POST"
+                                {{-- Form Sửa tin tức --}}
+                                <form action="{{ route('admin.blog.store') }}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
-                                    <label for="">Ảnh bìa khoá học</label>
+                                    <label for="">Ảnh bìa </label>
                                     <div class="mb-3">
                                         <input type="file" accept="image/*" class="form-control" id="customFile"
-                                            name="thumbnail" value="{{ $course->thumbnail }}">
+                                            name="avatar" >
                                     </div>
                                     <div class="mb-3">
-                                        <label for="title" class="form-label">Tên Khoá học</label>
+                                        <label for="title" class="form-label">Tiêu đề</label>
                                         <input type="text" class="form-control" id="title" name="title" required
-                                            value="{{ $course->title }}">
+                                           >
                                     </div>
                                     <div class="mb-3">
                                         <label for="description" class="form-label">Mô tả</label>
                                         <input type="text" class="form-control" id="description" name="description"
-                                            required value="{{ $course->description }}">
+                                            required >
                                     </div>
                                     <div class="mb-3">
                                         <label>Nội dung</label>
-                                        <textarea id="my-editor" name="content" class="form-control">{{ $course->content }}</textarea>
+                                        <textarea id="my-editor" name="content" class="form-control"></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">chỉnh sửa Khoá học</button>
+                                    <button type="submit" class="btn btn-primary">Thêm tin tức</button>
                                 </form>
                             </div>
                         </div>
