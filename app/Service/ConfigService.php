@@ -86,11 +86,7 @@ class ConfigService
         //Setting up images manually. Should loop through $_File though
 
 
-        if ($request->hasFile('thumbnail')) {
-            $imageName = time(). '_'. uniqid(). '.'. $request->thumbnail->getClientOriginalExtension();
-            $request->thumbnail->move(public_path('assets/img/thumbnails'), $imageName);
-            $course->thumbnail = $imageName;
-        }
+
 
 
         if ($logo) {
