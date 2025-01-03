@@ -17,18 +17,25 @@
             "logo": "logo.png",
             "favicon": "favicon.ico",
             "hotline": "+8437 378 1186",
-            "address": "45 Đông Hồ , Phường 2 , Quận Tân Bình , Thành Phố Hồ Chí Minh,Việt Nam",
+            "address": "45 Đông Hồ , Phường 2 , Quận Tân Bình , Thành Phố Hồ Chí Minh, Việt Nam",
             "email": "ssb@edu.vn",
-            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.6288889943407!2d89.24179957479988!3d24.008878578805188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9bfb7d4038fb%3A0x2e698dd3196ad36f!2sRRDevs!5e0!3m2!1sen!2sbd!4v1707636832892!5m2!1sen!2sbd"
+            "map": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d642.3309366635615!2d106.65165937695369!3d10.78381626526997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3f7f9e76a7%3A0xbf5cb4443138daca!2zVHLGsOG7nW5nIEtpbmggRG9hbmggdsOgIEzDo25oIMSQ4bqhbyBTU0I!5e1!3m2!1sen!2s!4v1735868332360!5m2!1sen!2s\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
         }
     ],
     "blog": [
         {
             "user_id": "1",
             "title": "Về chúng tôi",
-            "avatar": "1735780283_6775e7bb0fcad.png",
+            "avatar": "1735780141_6775e72d022ef.png",
             "description": "trường kinh doanh và đào tạo",
             "content": "test"
+        },
+        {
+            "user_id": "1",
+            "title": "Học sao cho hiệu quả",
+            "avatar": "1735780141_6775e72d022ef.png",
+            "description": "Học sao cho hiệu quả",
+            "content": "Học sao cho hiệu quả"
         }
     ],
     "role": [
