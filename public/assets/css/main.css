@@ -757,7 +757,7 @@ p {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../assets/img/portfolio/our-portfolio-bg.html);
+    background-image: url(../img/portfolio/our-portfolio-bg.png);
 }
 
 /* ----------------------------------
@@ -12252,7 +12252,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     height: 19.91px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(assets/img/about/star.png);
+    background-image: url(../img/about/star.png);
 }
 
 .company-skill .container {
@@ -12269,7 +12269,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     background-size: auto;
     background-repeat: no-repeat;
     animation: scale 3s linear infinite;
-    background-image: url(assets/img/about/company-skill-bg.png);
+    background-image: url(../img/about/company-skill-bg.png);
 }
 @media (min-width: 1200px) {
     .company-skill__content {
@@ -13428,7 +13428,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     height: 19.91px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(assets/img/testimonial/star.png);
+    background-image: url(../img/testimonial/star.png);
 }
 .testimonial__item .description {
     max-width: 432px;
@@ -16833,7 +16833,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     margin-left: -40px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(assets/img/team-details/comment.png);
+    background-image: url(../img/team-details/comment.png);
     opacity: 0;
     animation: show 0.35s forwards ease-in-out 0.5s;
 }
@@ -16883,7 +16883,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     width: 2479.27px;
     position: absolute;
     background-size: auto;
-    background-image: url(assets/img/home/our-portfolio-home-overly.png);
+    background-image: url(../img/home/our-portfolio-home-overly.png);
 }
 .our-portfolio-home .mb-minus-30 {
     margin-bottom: -30px;
@@ -17257,7 +17257,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f3f3f2;
-    background-image: url(assets/img/portfolio/our-portfolio-bg.png);
+    background-image: url(../img/portfolio/our-portfolio-bg.png);
 }
 @media (max-width: 991px) {
     .our-team.our-porfolio:after {
@@ -18812,7 +18812,7 @@ header.transparent.stop.header-2 .main-header-wraper {
     background-repeat: no-repeat;
     background-position: center;
     background: #000;
-    background-image: url(assets/img/portfolio/our-portfolio-bg.png);
+    background-image: url(../img/portfolio/our-portfolio-bg.png);
 }
 .dark .our-team {
     background: #000 !important;

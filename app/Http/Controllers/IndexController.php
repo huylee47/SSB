@@ -30,4 +30,13 @@ class IndexController extends Controller
         }
         return view('client.layouts.index',compact("config","courses","isSPA","blogs"));
     }
+    public function  about(){
+        $config = $this->configService->find(1);
+        $isSPA=false;
+        //Checking if page is loaded directly or through spa
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest') {
+            $isSPA=true;
+        }
+        return view('client.about.index',compact("config","isSPA"));
+    }
 }
