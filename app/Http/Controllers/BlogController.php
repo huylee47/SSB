@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
 use App\Service\BlogService;
-use Illuminate\Http\Request;
+use App\Http\Requests\BlogRequest;
 
 class BlogController extends Controller
 {
@@ -33,7 +32,7 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
         return $this->blogService->store($request);
     }
@@ -48,7 +47,7 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(BlogRequest $request, $id)
     {
         return $this->blogService->update($request, $id);
     }
