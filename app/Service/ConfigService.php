@@ -9,9 +9,9 @@ use App\Models\Config;
 
 class ConfigService
 {
-    public function find($id)
+    public function find()
     {
-        $config = Config::find($id);
+        $config = Config::first();
 
         if ($config) {
             return new ConfigResource($config);
