@@ -1,13 +1,11 @@
 @php $extends = $isSPA ? 'client.layouts.spa' : 'client.master'; @endphp
 @extends($extends)
-{{--If page is loaded directly by another page( then no need to extends/or just extends to a dummy page)--}}
-{{--If page is loaded directly then extends to master layout--}}
 @section("content")
 <div>
     <div class="banner-home overflow-hidden pt-lg-100 pt-md-90 pt-sm-80 pt-xs-70">
         <div class="container">
             {{-- <div class="row align-items-center"> --}}
-                    <img src="assets/img/banner/ssb.png" alt="" width="100%">
+                    <img src="{{asset("assets/img/banner/ssb.png")}}" alt="" width="100%">
                 {{-- <div class="col-xl-6">
                     <div class="banner-home__content pb-lg-60 pb-md-50 pb-sm-45 pb-xs-40 wow fadeInLeft"
                         data-wow-delay=".5s">
@@ -116,40 +114,20 @@
         <div class="our-company pb-xs-80 pb-100 overflow-hidden">
             <div class="container">
                 <div class="row">
-                    {{-- <div class="col-lg-3 col-sm-6">
-                        <div class="our-company__meida wow fadeInUp" data-wow-delay=".3s">
-                            <img src="assets/img/about/our-company-1.png" alt="" class="img-fluid">
 
-                            <div class="years-experience overflow-hidden bg-red mt-20 mt-sm-10 mt-xs-10 text-center">
-                                <div class="number mb-5 color-black">
-                                    <span class="counter">23</span><sup>+</sup>
-                                </div>
-
-                                <h5 class="title color-black">Years Experience</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="our-company__meida border-radius wow fadeInUp" data-wow-delay=".5s">
-                            <img src="assets/img/about/our-company-2.png" alt="" class="img-fluid">
-
-                            <div class="horizental-bar bg-red"></div>
-                        </div>
-                    </div> --}}
                     <div class="col-lg-5">
                     <div class="image-container">
                         <div class="large-image-wrapper">
-                            <img src="assets/img/about/our-company-2.png" alt="Large Image" class="large-image" />
+                            <img src="{{asset("assets/img/about/our-company-2.png")}}" alt="Large Image" class="large-image" />
                         </div>
-                        <img src="assets/img/about/our-company-2.png" alt="Small Image" class="small-image" />
+                        <img src="{{asset("assets/img/about/our-company-2.png")}}" alt="Small Image" class="small-image" />
                       </div>
                     </div>
                       <div class="col-lg-7">
                         <div class="our-company__content mt-md-50 mt-sm-40 mt-xs-35 wow fadeInUp"
                             data-wow-delay=".7s">
-                            <span class="sub-title fw-500 color-red text-uppercase mb-sm-10 mb-xs-5 mb-20 d-block"><img
-                                    src="assets/img/home/line.svg" class="img-fluid mr-10" alt=""> Về chúng
+                             <span class="sub-title fw-500 color-red text-uppercase mb-sm-10 mb-xs-5 mb-20 d-block"><img
+                                    src="{{asset("assets/img/home/line.svg")}}" class="img-fluid mr-10" alt=""> Về chúng
                                 tôi</span>
                             <h2 class="title color-pd_black mb-20 mb-sm-15 mb-xs-10">Trường Kinh doanh và lãnh đạo</h2>
 
@@ -245,9 +223,9 @@
                     <div class="">
                         <center>
                             <span class="sub-title d-block fw-500 color-red text-uppercase mb-sm-10 mb-xs-5 mb-15">
-                                <img src="assets/img/home/line.svg" class="img-fluid mr-10" alt="">
+                                <img src="{{asset("assets/img/home/line.svg")}}" class="img-fluid mr-10" alt="">
                                 Khoá học
-                                <img src="assets/img/home/line.svg" class="img-fluid mr-10" alt="">
+                                <img src="{{asset("assets/img/home/line.svg")}}" class="img-fluid mr-10" alt="">
                             </span>
                             <h2 class="title color-pd_black">Khoá học của chúng tôi</h2>
                         </center>
@@ -276,7 +254,7 @@
                             <div class="card-outside">
                                 <div class="card-icon d-flex justify-content-center align-items-center">
                                     <img
-                                    src="{{ url('') }}/assets/img/thumbnails/{{ $course->thumbnail }}"        
+                                    src="{{ url('') }}/assets/img/thumbnails/{{ $course->thumbnail }}"
                                     />
                                 </div>
                             </div>
@@ -732,7 +710,7 @@
                     <div class="our-team__content mb-60 mb-md-50 mb-sm-40 mb-xs-30 text-center wow fadeInUp"
                         data-wow-delay=".3s">
                         <span class="sub-title fw-500 color-red text-uppercase mb-sm-10 mb-xs-5 mb-15 d-block"><img
-                                src="assets/img/home/line.svg" class="img-fluid mr-10" alt=""> Great
+                                src="{{asset("assets/img/home/line.svg")}}" class="img-fluid mr-10" alt=""> Great
                             team</span>
                         <h2 class="title color-d_black">Danh sách giảng viên</h2>
                     </div>
@@ -744,7 +722,7 @@
                     <div class="team-item team-item-three text-center mb-30 d-block overflow-hidden wow fadeInUp"
                         data-wow-delay=".3s">
                         <div class="media">
-                            <img src="assets/img/team/team-item-10.jpg" class="img-fluid" alt="">
+                            <img src="{{asset("assets/img/team/team-item-10.jpg")}}" class="img-fluid" alt="">
 
                             <div class="social-profile">
                                 <ul>
@@ -773,7 +751,7 @@
                     <div class="team-item team-item-three text-center mb-30 d-block overflow-hidden wow fadeInUp"
                         data-wow-delay=".5s">
                         <div class="media">
-                            <img src="assets/img/team/team-item-11.jpg" class="img-fluid" alt="">
+                            <img src="{{asset("assets/img/team/team-item-11.jpg")}}" class="img-fluid" alt="">
 
                             <div class="social-profile">
                                 <ul>
@@ -802,7 +780,7 @@
                     <div class="team-item team-item-three text-center mb-30 d-block overflow-hidden wow fadeInUp"
                         data-wow-delay=".7s">
                         <div class="media">
-                            <img src="assets/img/team/team-item-1.jpg" class="img-fluid" alt="">
+                            <img src="{{asset("assets/img/team/team-item-1.jpg")}}" class="img-fluid" alt="">
 
                             <div class="social-profile">
                                 <ul>
@@ -831,7 +809,7 @@
                     <div class="team-item team-item-three text-center mb-30 d-block overflow-hidden wow fadeInUp"
                         data-wow-delay=".9s">
                         <div class="media">
-                            <img src="assets/img/team/team-item-12.jpg" class="img-fluid" alt="">
+                            <img src="{{asset("assets/img/team/team-item-12.jpg")}}" class="img-fluid" alt="">
 
                             <div class="social-profile">
                                 <ul>
@@ -1236,7 +1214,7 @@
                     </div> --}}
                         <div class="employee-friendly__content wow fadeInUp" data-wow-delay=".3s">
                             <span class="sub-title fw-500 color-red text-uppercase mb-sm-10 mb-xs-5 mb-15 d-block"><img
-                                    src="assets/img/home/line.svg" class="img-fluid mr-10" alt="">
+                                    src="{{asset("assets/img/home/line.svg")}}" class="img-fluid mr-10" alt="">
                                 tin tức</span>
                             <h2 class="title color-pd_black">Cập nhật tin tức</h2>
                         </div>
@@ -1250,7 +1228,7 @@
                             <div class="blog-item blog-item-three mb-30 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="blog-featured-thumb mb-xs-30 mb-sm-30 mb-md-35 mb-lg-40 mb-50">
                                     <div class="media overflow-hidden">
-                                        <img src="assets/img/blog/{{$blog->avatar}}" class="img-fluid" alt="">
+                                        <img src="{{asset("assets/img/blog/$blog->avatar")}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="date">
                                         <span>{{ $blog->created_at->translatedFormat('d') }}</span>
@@ -1276,7 +1254,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         @endforeach
                     </div>
                 </div>
