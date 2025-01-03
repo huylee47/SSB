@@ -1270,7 +1270,7 @@
                                     </h6>
 
                                     <div class="btn-link-share mt-xs-10 mt-sm-10 mt-15">
-                                        <a href="blog.html" class="theme-btn btn-border">Đọc thêm <i
+                                        <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="theme-btn btn-border">Đọc thêm <i
                                                 class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
