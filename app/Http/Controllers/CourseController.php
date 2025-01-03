@@ -14,7 +14,9 @@ class CourseController extends Controller
     }
     public function index()
     {
-        return $this->courseService->index();
+        $courses = $this->courseService->index();
+        return view('admin.course.index',compact('courses'));
+
     }
 
     /**
@@ -32,15 +34,6 @@ class CourseController extends Controller
     {
         return $this->courseService->store($request);
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Course $course)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -64,5 +57,17 @@ class CourseController extends Controller
     public function delete($id)
     {
         return $this->courseService->delete($id);
+    }
+    // Client 
+    
+    /**
+     * Display the specified resource.
+     */
+    public function show($lug)
+    {
+        return $this->courseService->show($lug);
+    }
+    public function listCourses(){
+        return  $this->courseService->listCourses();
     }
 }
