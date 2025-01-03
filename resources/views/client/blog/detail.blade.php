@@ -153,7 +153,8 @@
                                 </div>
                             @endforeach
 
-                            <a href="{{route('blog.index')}}" class="theme-btn d-block"><i class="far fa-sync-alt"></i>More Post</a>
+                            <a href="{{ route('blog.index') }}" class="theme-btn d-block"><i
+                                    class="far fa-sync-alt"></i>Tìm hiểu thêm</a>
                         </div>
                     </div>
 
