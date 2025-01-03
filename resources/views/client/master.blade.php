@@ -113,7 +113,7 @@
                                             <a href="#">Giới thiệu</a>
                                         </li>
                                         <li>
-                                            <a href="#">Khoá học</a>
+                                            <a href="{{route('course.index')}}">Khoá học</a>
                                         </li>
                                         <li>
                                             <a href="{{route('blog.index')}}">Tin tức</a>
@@ -176,7 +176,7 @@
                                     <a href="#">Giới thiệu</a>
                                 </li>
                                 <li>
-                                    <a href="#">Khoá học</a>
+                                    <a href="{{route('course.index')}}">Khoá học</a>
                                 </li>
                                 <li>
                                     <a href="{{route('blog.index')}}">Tin tức</a>
@@ -265,7 +265,7 @@
 
         <div class="container">
             <div class="row justify-content-between">
-                <a href="index.html" class="d-block mb-30 mb-xs-20">
+                <a href="{{route('index')}}" class="d-block mb-30 mb-xs-20">
                     <img src="{{asset("assets/img/logo/footer-logo.png")}}" alt="" width="20%">
                 </a>
                 <div class="col-md-6 col-xl-3">
@@ -293,31 +293,23 @@
                 <div class="col-md-6 col-xl-4">
                     <div class="single-footer-wid recent_post_widget pl-xl-10 pl-65 pr-50 pr-xl-30">
                         <h4 class="wid-title mb-30 color-white">Bài viết gần đây</h4>
+                        @foreach ($blogs->slice(-2) as $blog)       
+                        <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
+                            <div class="thumb">
+                                <img src="{{ url('') }}/assets/img/blog/{{ $blog->avatar }}" style="width: 70px; height: auto;" alt="">
+                            </div>
+
+                            <div class="post-data">
+                                <span class="color-white d-flex ailign-items-center"><i
+                                        class="far fa-clock"></i> {{ $blog->created_at->translatedFormat('d,F,Y') }}</span>
+                                <h5 class="color-white mb-10 fw-600"> {{$blog->title}}</h5>
+                            </div>
+                        </a>
+                        @endforeach
 
                         <div class="recent-post-list">
-                            <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="{{asset("assets/img/footer/resent-post-1.png")}}" alt="">
-                                </div>
 
-                                <div class="post-data">
-                                    <span class="color-white d-flex ailign-items-center"><i
-                                            class="far fa-clock"></i>January 11, 2018</span>
-                                    <h5 class="color-white mb-10 fw-600">Xây dựng thương hiệu cá nhân</h5>
-                                </div>
-                            </a>
 
-                            <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="{{asset("assets/img/footer/resent-post-2.png")}}" alt="">
-                                </div>
-
-                                <div class="post-data">
-                                    <span class="color-white d-flex ailign-items-center"><i
-                                        class="far fa-clock"></i>January 11, 2018</span>
-                                <h5 class="color-white mb-10 fw-600">Làm thế nào để không lãng phí thời gian</h5>
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -328,12 +320,9 @@
                         <h4 class="wid-title mb-30 color-white">Khoá học</h4>
 
                         <ul>
-                            <li><a href="">Chuyên viên Marketing</a></li>
-                            <li><a href="">Chuyên viên Logistics</a></li>
-                            <li><a href="l">Quản lý hành chính- nhân sự</a></li>
-                            {{-- <li><a href="">Investor Career</a></li>
-                            <li><a href="">Meet Our Team</a></li>
-                            <li><a href="">Support</a></li> --}}
+                            @foreach ($courses->random(4) as $course)
+                            <li><a href="">{{$course->title}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
