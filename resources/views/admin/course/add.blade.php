@@ -30,39 +30,39 @@
                             <div class="card-header">
                             </div>
                             <div class="card-body">
-                                {{-- Hiển thị thông báo lỗi --}}
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
+
 
                                 {{-- Form thêm khoá học --}}
-                                <form action="{{ route('admin.course.store') }}" method="POST"
-                                    enctype="multipart/form-data">
+                                <form action="{{ route('admin.course.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <label for="">Ảnh bìa khoá học</label>
                                     <div class="mb-3">
-                                        <input type="file" accept="image/*" class="form-control" id="customFile"
-                                            name="thumbnail">
+                                        <input type="file" accept="image/*" class="form-control" id="customFile" name="thumbnail">
                                         <label class="custom-file-label" for="customFile">Chọn ảnh</label>
+                                        @error('thumbnail')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="title" class="form-label">Tên Khoá học</label>
-                                        <input type="text" class="form-control" id="title" name="title" required>
+                                        <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
+                                        @error('title')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="description" class="form-label">Mô tả</label>
-                                        <input type="text" class="form-control" id="description" name="description"
-                                            required>
+                                        <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}">
+                                        @error('description')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label>Nội dung</label>
                                         <textarea id="my-editor" name="content" class="form-control">{{ old('content') }}</textarea>
+                                        @error('content')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn btn-primary">Thêm Khoá học</button>
                                 </form>

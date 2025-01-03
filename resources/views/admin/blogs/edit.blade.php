@@ -16,7 +16,7 @@
                     <div class="col-12 col-md-6 order-md-2 order-first">
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Sửa tin tức</li>
                             </ol>
                         </nav>
@@ -30,17 +30,6 @@
                             <div class="card-header">
                             </div>
                             <div class="card-body">
-                                {{-- Hiển thị thông báo lỗi --}}
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
-
                                 {{-- Form Sửa  --}}
                                 <form action="{{ route('admin.blog.update', ['id' => $blog->id]) }}" method="POST"
                                     enctype="multipart/form-data">
@@ -48,24 +37,41 @@
                                     <label for="">Ảnh bìa </label>
                                     <div class="mb-3">
                                         <input type="file" accept="image/*" class="form-control" id="customFile"
-                                            name="avatar" value="{{ $blog->avatar }}">
+                                            name="avatar" value="{{ old('avatar', $blog->avatar) }}">
+                                            <br>
+                                            <label>ảnh bìa hiện tại</label>
+                                            <img src="{{ url('') }}/assets/img/blog/{{ $blog->avatar }}"
+                                                alt="" width="10%">
+                                        @error('avatar')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="title" class="form-label">Tiêu đề</label>
                                         <input type="text" class="form-control" id="title" name="title" required
-                                            value="{{ $blog->title }}">
+                                            value="{{ old('title', $blog->title) }}">
+                                        @error('title')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label for="description" class="form-label">Mô tả</label>
                                         <input type="text" class="form-control" id="description" name="description"
-                                            required value="{{ $blog->description }}">
+                                            required value="{{ old('description', $blog->description) }}">
+                                        @error('description')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="mb-3">
                                         <label>Nội dung</label>
-                                        <textarea id="my-editor" name="content" class="form-control">{{ $blog->content }}</textarea>
+                                        <textarea id="my-editor" name="content" class="form-control">{{ old('content', $blog->content) }}</textarea>
+                                        @error('content')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn btn-primary">Sửa tin tức</button>
                                 </form>
+
                             </div>
                         </div>
                     </div>
