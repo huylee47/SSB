@@ -153,7 +153,7 @@
                                 </div>
                             @endforeach
 
-                            <a href="blog.html" class="theme-btn d-block"><i class="far fa-sync-alt"></i>More Post</a>
+                            <a href="{{route('blog.index')}}" class="theme-btn d-block"><i class="far fa-sync-alt"></i>More Post</a>
                         </div>
                     </div>
 

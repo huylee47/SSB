@@ -101,7 +101,7 @@ class ConfigService
         if ($favicon) {
             $extension = $favicon->extension();
             $fileName = time(). '_'. uniqid(). '.'. $extension;
-            $favicon->move(public_path('assets/img/config'), $fileName);
+            $favicon->move(public_path('assets/img/icon'), $fileName);
             $newConfig['favicon'] = $fileName;
         } else {
             $newConfig['favicon'] = $originalConfig->favicon;
