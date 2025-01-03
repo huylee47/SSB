@@ -16,6 +16,13 @@ class BlogService{
     }
     public function store($request){
         $user_id = Auth::user();
+        $request->validate([
+            'avatar' => 'required|max:2048',
+        ],
+        [
+            'avatar.required' => 'Thiếu ảnh.',
+            'avatar.max' => 'Ảnh không được vượt quá 2MB.',
+        ]);
         $imageName = null;
         if ($request->hasFile('avatar')) {
             $imageName = time() . '_' . uniqid() . '.' . $request->avatar->getClientOriginalExtension();
@@ -37,21 +44,25 @@ class BlogService{
         return view('admin.blogs.edit',compact('blog'));
     }
 
-    public function update($request, $id){
+    public function update($request, $id)
+    {
         $blog = Blog::find($id);
+    
         if ($request->hasFile('avatar')) {
-            $imageName = time(). '_'. uniqid(). '.'. $request->avatar->getClientOriginalExtension();
+            $imageName = time() . '_' . uniqid() . '.' . $request->avatar->getClientOriginalExtension();
             $request->avatar->move(public_path('assets/img/blog'), $imageName);
             $blog->avatar = $imageName;
         }
+    
         $blog->title = $request->title;
         $blog->content = $request->content;
         $blog->description = $request->description;
-        $blog->avatar = $imageName;
+    
         $blog->save();
+    
         return redirect()->route('admin.blog.index')->with('success', 'Sửa thành công');
-
     }
+    
     public function delete($id){
         $blog = Blog::find($id);
         $blog->delete();
