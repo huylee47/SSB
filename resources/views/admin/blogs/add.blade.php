@@ -16,7 +16,7 @@
                     <div class="col-12 col-md-6 order-md-2 order-first">
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Sửa tin tức</li>
                             </ol>
                         </nav>
@@ -27,43 +27,50 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header">
-                            </div>
+                            <div class="card-header"></div>
                             <div class="card-body">
-                                {{-- Hiển thị thông báo lỗi --}}
-                                @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
-
                                 {{-- Form Sửa tin tức --}}
-                                <form action="{{ route('admin.blog.store') }}" method="POST"
-                                    enctype="multipart/form-data">
+                                <form action="{{ route('admin.blog.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
-                                    <label for="">Ảnh bìa </label>
+
+                                    {{-- Ảnh bìa --}}
+                                    <label for="avatar">Ảnh bìa</label>
                                     <div class="mb-3">
-                                        <input type="file" accept="image/*" class="form-control" id="customFile"
-                                            name="avatar" >
+                                        <input type="file" accept="image/*" class="form-control" id="avatar" name="avatar">
+                                        @error('avatar')
+                                            <div class="text-danger mt-1">{{ $message }}</div>
+                                        @enderror
                                     </div>
+
+                                    {{-- Tiêu đề --}}
                                     <div class="mb-3">
                                         <label for="title" class="form-label">Tiêu đề</label>
-                                        <input type="text" class="form-control" id="title" name="title" required
-                                           >
+                                        <input type="text" class="form-control" id="title" name="title"
+                                            value="{{ old('title') }}" >
+                                        @error('title')
+                                            <div class="text-danger mt-1">{{ $message }}</div>
+                                        @enderror
                                     </div>
+
+                                    {{-- Mô tả --}}
                                     <div class="mb-3">
                                         <label for="description" class="form-label">Mô tả</label>
                                         <input type="text" class="form-control" id="description" name="description"
-                                            required >
+                                            value="{{ old('description') }}" >
+                                        @error('description')
+                                            <div class="text-danger mt-1">{{ $message }}</div>
+                                        @enderror
                                     </div>
+
+                                    {{-- Nội dung --}}
                                     <div class="mb-3">
-                                        <label>Nội dung</label>
-                                        <textarea id="my-editor" name="content" class="form-control"></textarea>
+                                        <label for="my-editor">Nội dung</label>
+                                        <textarea id="my-editor" name="content" class="form-control">{{ old('content') }}</textarea>
+                                        @error('content')
+                                            <div class="text-danger mt-1">{{ $message }}</div>
+                                        @enderror
                                     </div>
+
                                     <button type="submit" class="btn btn-primary">Thêm tin tức</button>
                                 </form>
                             </div>
@@ -72,6 +79,7 @@
                 </div>
             </section>
         </div>
+
         <script src="https://cdn.ckeditor.com/4.5.11/full-all/ckeditor.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
@@ -85,7 +93,8 @@
 
                     reader.readAsDataURL(this.files[0]);
                 }
-            })
+            });
+
             var options = {
                 filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
                 filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
@@ -95,4 +104,5 @@
             };
             CKEDITOR.replace('my-editor', options);
         </script>
-    @endsection
+    </div>
+@endsection
