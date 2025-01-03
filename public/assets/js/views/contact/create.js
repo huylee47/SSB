@@ -18,7 +18,7 @@ $(document).ready(function () {
             },
             error: function (xhr) {
                 let errorMessage = 'Lỗi gửi tin nhắn';
-                if (xhr.status === 409) {
+                if (xhr.status === 409 ||xhr.status === 422 ) {
                     errorMessage = 'Email đã gửi đi trước đó!';
                 }
 

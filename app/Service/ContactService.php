@@ -73,9 +73,6 @@ class ContactService {
 
     public function sendEmail(ContactResource $contact): bool
     {
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
         $email = $contact->email;
         $name = $contact->name;
         $message = $contact->message;
@@ -93,7 +90,7 @@ class ContactService {
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'huyvhpp02961@fpt.edu.vn';//<-- PUT YOUR GOOGLE EMAIL HERE
-            $mail->Password = '';//<-- PUT YOUR GOOGLE APPLICATION PASSWORD HERE
+            $mail->Password = 'ztit zadj yyga snqv';//<-- PUT YOUR GOOGLE APPLICATION PASSWORD HERE
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
