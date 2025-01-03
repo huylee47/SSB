@@ -1,5 +1,6 @@
-@extends('client.master')
-@section('content')
+@php $extends = $isSPA ? 'client.layouts.spa' : 'client.master'; @endphp
+@extends($extends)
+@section("content")
     <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">

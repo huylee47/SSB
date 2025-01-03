@@ -152,7 +152,7 @@
                             </div>
                             <div>
                                 <br>
-                                <a href="services.html" class="theme-btn btn-sm btn-red">Xem thêm <i
+                                <a data-spa href="{{route("about")}}" class="theme-btn btn-sm btn-red">Xem thêm <i
                                         class="far fa-chevron-double-right"></i></a>
                             </div>
 
@@ -263,7 +263,7 @@
                             <div class="card-content d-inline-block text-truncate" >
                                 {{$course->description}}
                             </div>
-                            <a href="#" class="card-button">Xem chi tiết</a>
+                            <a  href="{{route('course.show',['slug'=>$course->slug])}}" class="card-button">Xem chi tiết</a>
                         </div>
                     @endforeach
                 @else

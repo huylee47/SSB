@@ -47,29 +47,29 @@ class BlogService{
     public function update($request, $id)
     {
         $blog = Blog::find($id);
-    
+
         if ($request->hasFile('avatar')) {
             $imageName = time() . '_' . uniqid() . '.' . $request->avatar->getClientOriginalExtension();
             $request->avatar->move(public_path('assets/img/blog'), $imageName);
             $blog->avatar = $imageName;
         }
-    
+
         $blog->title = $request->title;
         $blog->content = $request->content;
         $blog->description = $request->description;
-    
+
         $blog->save();
-    
+
         return redirect()->route('admin.blog.index')->with('success', 'Sửa thành công');
     }
-    
+
     public function delete($id){
         $blog = Blog::find($id);
         $blog->delete();
         return redirect()->route('admin.blog.index')->with('success', 'xoá thành công');
 
     }
-    // Client 
+    // Client
     public function show($slug){
         $blog = Blog::where('slug', $slug)->first();
         $config = Config::first();
@@ -81,8 +81,12 @@ class BlogService{
         return $blogs;
     }
     public function listBlogs(){
+        $isSPA=false;
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest') {
+            $isSPA=true;
+        }
         $blogs = Blog::paginate(9);
         $config = Config::first();
-        return view('client.blog.index',compact('blogs','config'));
+        return view('client.blog.index',compact('blogs','config',"isSPA"));
     }
 }

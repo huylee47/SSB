@@ -110,16 +110,16 @@
                                             <a data-spa href="{{route("index")}}">Trang chủ</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('about')}}">Giới thiệu</a>
+                                            <a data-spa href="{{route('about')}}">Giới thiệu</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('course.index')}}">Khoá học</a>
+                                            <a data-spa href="{{route('course.index')}}">Khoá học</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('blog.index')}}">Tin tức</a>
+                                            <a data-spa href="{{route('blog.index')}}">Tin tức</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
+                                            <a data-spa href="{{route('contact.create')}}" >Liên hệ</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -173,13 +173,13 @@
                                     <a data-spa href="{{route("index")}}">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="#">Giới thiệu</a>
+                                    <a data-spa href="{{route("about")}}">Giới thiệu</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('course.index')}}">Khoá học</a>
+                                    <a data-spa href="{{route('course.index')}}" >Khoá học</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('blog.index')}}">Tin tức</a>
+                                    <a href="{{route('blog.index')}}" data-spa>Tin tức</a>
                                 </li>
                                 <li>
                                     <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
@@ -293,15 +293,26 @@
                 <div class="col-md-6 col-xl-4">
                     <div class="single-footer-wid recent_post_widget pl-xl-10 pl-65 pr-50 pr-xl-30">
                         <h4 class="wid-title mb-30 color-white">Bài viết gần đây</h4>
-                        @foreach ($blogs->slice(-2) as $blog)       
+                        @foreach ($blogs->slice(-2) as $blog)
                         <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
                             <div class="thumb">
                                 <img src="{{ url('') }}/assets/img/blog/{{ $blog->avatar }}" style="width: 70px; height: auto;" alt="">
                             </div>
 
                             <div class="post-data">
-                                <span class="color-white d-flex ailign-items-center"><i
-                                        class="far fa-clock"></i> {{ $blog->created_at->translatedFormat('d,F,Y') }}</span>
+                                <span class="color-white d-flex ailign-items-center">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                             <i class="far fa-clock">
+                                    </i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            {{$blog->created_at->translatedFormat('d, F, Y') }}
+                                        </div>
+                                    </div>
+
+
+                                </span>
                                 <h5 class="color-white mb-10 fw-600"> {{$blog->title}}</h5>
                             </div>
                         </a>

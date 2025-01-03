@@ -18,11 +18,12 @@ class CourseService {
     }
 
     public function show($slug){
+
         $course = Course::where('slug', $slug)->first();
         if (!$course) {
             return redirect()->route('client.course.index')->with('error', 'Khóa học không tồn tại!');
         }
-        return view('client.course.detail', compact('course')); 
+        return view('client.course.detail', compact('course'));
     }
 
     public function create(){
@@ -99,7 +100,11 @@ class CourseService {
     }
 
     public function listCourses(){
+        $isSPA=false;
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest') {
+            $isSPA=true;
+        }
         $courses = Course::paginate(4);
-        return view('client.course.index', compact('courses'));
+        return view('client.course.index', compact('courses',"isSPA"));
     }
 }
