@@ -20,7 +20,7 @@ class IndexController extends Controller
     }
 
     public function index(){
-        $config = $this->configService->find(1);//By default there should be only one record, so ID = 1
+        $config = $this->configService->find();
         $courses = $this-> courseService->indexAPI();
         $blogs = $this->blogService->RecentBlog();
         $isSPA=false;
