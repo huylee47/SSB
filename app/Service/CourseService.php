@@ -32,6 +32,13 @@ class CourseService {
     public function store(Request $request)
     {
         $imageName = null;
+        $request->validate([
+            'thumbnail' => 'required|max:2048',
+        ],
+        [
+            'thumbnail.required' => 'Thiếu ảnh.',
+            'thumbnail.max' => 'Ảnh không được vượt quá 2MB.',
+        ]);
         if ($request->hasFile('thumbnail')) {
             $imageName = time() . '_' . uniqid() . '.' . $request->thumbnail->getClientOriginalExtension();
             $request->thumbnail->move(public_path('assets/img/thumbnails'), $imageName);
