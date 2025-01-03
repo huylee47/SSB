@@ -91,27 +91,29 @@
                             <a href="{{route("index")}}">
                                 <img src="{{asset("assets/img/logo/logo.png")}}" alt="logo" width="20%">
                             </a>
-                        </div>
 
-                        <div class="header-menu d-none d-xl-block">
-                            <div class="main-menu">
-                                <ul>
-                                    <li>
-                                        <a data-spa href="{{route("index")}}">Trang chủ</a>
-                                    </li>
-                                    <li>
-                                        <a data-spa href="{{route("about")}}">Giới thiệu</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Khoá học</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tin tức</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
-                                    </li>
-                                </ul>
+                        </div>
+                            <div class="header-menu d-none d-xl-block">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li>
+                                            <a data-spa href="{{route("index")}}">Trang chủ</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route("about")}}">Giới thiệu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('course.index')}}">Khoá học</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('blog.index')}}">Tin tức</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
 
@@ -145,37 +147,41 @@
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- mobile menu - responsive menu  -->
-<div class="mobile-nav mobile-nav-red">
-    <button type="button" class="close-nav">
-        <i class="fal fa-times-circle"></i>
-    </button>
+    <!-- mobile menu - responsive menu  -->
+    <div class="mobile-nav mobile-nav-red">
+        <button type="button" class="close-nav">
+            <i class="fal fa-times-circle"></i>
+        </button>
 
-    <nav class="sidebar-nav">
-        <div class="navigation">
-            <div class="consulter-mobile-nav">
-                <a href="#">Home</a>
-                <ul>
-                    <li>
-                        <a data-spa href="{{route("index")}}">Trang chủ</a>
-                    </li>
-                    <li>
-                        <a data-spa  href="{{route("about")}}">Giới thiệu</a>
-                    </li>
-                    <li>
-                        <a href="#">Khoá học</a>
-                    </li>
-                    <li>
-                        <a href="#">Tin tức</a>
-                    </li>
-                    <li>
-                        <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="sidebar-nav">
+            <div class="navigation">
+                <div class="consulter-mobile-nav">
+                            <a href="#">Home</a>
+                            <ul>
+                                <li>
+                                    <a data-spa href="{{route("index")}}">Trang chủ</a>
+                                </li>
+                                <li>
+                                    <a href="{{route("about")}}">Giới thiệu</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('course.index')}}">Khoá học</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('blog.index')}}">Tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('contact.create')}}" data-spa>Liên hệ</a>
+                                </li>
+                            </ul>
+                </div>
+
+                <div class="sidebar-nav__bottom mt-20">
+                    <div class="sidebar-nav__bottom-contact-infos mb-20">
+                        <h6 class="color-black mb-5">thông tin liên hệ</h6>
+
 
             <div class="sidebar-nav__bottom mt-20">
                 <div class="sidebar-nav__bottom-contact-infos mb-20">
@@ -265,51 +271,44 @@
             </div>
             <!-- /.col-lg-3 - single-footer-wid -->
 
-            <div class="col-md-6 col-xl-4">
-                <div class="single-footer-wid recent_post_widget pl-xl-10 pl-65 pr-50 pr-xl-30">
-                    <h4 class="wid-title mb-30 color-white">Bài viết gần đây</h4>
-
-                    <div class="recent-post-list">
+                <div class="col-md-6 col-xl-4">
+                    <div class="single-footer-wid recent_post_widget pl-xl-10 pl-65 pr-50 pr-xl-30">
+                        <h4 class="wid-title mb-30 color-white">Bài viết gần đây</h4>
+                        @foreach ($blogs->slice(-2) as $blog)       
                         <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
                             <div class="thumb">
-                                <img src="{{asset("assets/img/footer/resent-post-1.png")}}" alt="">
+                                <img src="{{ url('') }}/assets/img/blog/{{ $blog->avatar }}" style="width: 70px; height: auto;" alt="">
                             </div>
 
                             <div class="post-data">
-                                    <span class="color-white d-flex ailign-items-center"><i
-                                            class="far fa-clock"></i>January 11, 2018</span>
-                                <h5 class="color-white mb-10 fw-600">Xây dựng thương hiệu cá nhân</h5>
+                                <span class="color-white d-flex ailign-items-center"><i
+                                        class="far fa-clock"></i> {{ $blog->created_at->translatedFormat('d,F,Y') }}</span>
+                                <h5 class="color-white mb-10 fw-600"> {{$blog->title}}</h5>
                             </div>
                         </a>
+                        @endforeach
 
-                        <a href="blog.html" class="single-recent-post mb-20 pb-20 d-flex align-items-center">
-                            <div class="thumb">
-                                <img src="{{asset("assets/img/footer/resent-post-2.png")}}" alt="">
-                            </div>
+                        <div class="recent-post-list">
 
-                            <div class="post-data">
-                                    <span class="color-white d-flex ailign-items-center"><i
-                                            class="far fa-clock"></i>January 11, 2018</span>
-                                <h5 class="color-white mb-10 fw-600">Làm thế nào để không lãng phí thời gian</h5>
-                            </div>
-                        </a>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <!-- /.col-lg-2 - single-footer-wid -->
-            <div class="col-md-6 col-xl-2">
-                <div class="single-footer-wid pl-xl-10 pl-50">
-                    <h4 class="wid-title mb-30 color-white">Khoá học</h4>
+                <!-- /.col-lg-2 - single-footer-wid -->
+                <div class="col-md-6 col-xl-2">
+                    <div class="single-footer-wid pl-xl-10 pl-50">
+                        <h4 class="wid-title mb-30 color-white">Khoá học</h4>
 
-                    <ul>
-                        <li><a href="">Chuyên viên Marketing</a></li>
-                        <li><a href="">Chuyên viên Logistics</a></li>
-                        <li><a href="l">Quản lý hành chính- nhân sự</a></li>
-                        {{-- <li><a href="">Investor Career</a></li>
-                        <li><a href="">Meet Our Team</a></li>
-                        <li><a href="">Support</a></li> --}}
-                    </ul>
+                        <ul>
+                            @foreach ($courses->random(4) as $course)
+                            <li><a href="">{{$course->title}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 

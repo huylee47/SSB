@@ -62,6 +62,10 @@ Route::prefix("/blog")->group(function () {
     Route::get("", [BlogController::class, "listBlogs"])->name("blog.index");
     Route::get("/{slug}", [BlogController::class, "show"])->name("blog.show");
 });
+Route::prefix("courses")->group(function() {
+    Route::get("/", [CourseController::class, "listCourses"])->name("course.index");
+    Route::get("/{slug}", [CourseController::class, "show"])->name("course.show");
+});
 
 
 

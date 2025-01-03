@@ -1,13 +1,13 @@
 @extends('client.master')
 @section('content')
-    <section class="blog pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
+    <section class="course pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
         <div class="container">
             <div class="row" data-sticky_parent>
                 <div class="col-xl-8" data-sticky_column>
-                    <div class="blog-item blog-standard blog-post-details">
-                        <div class="blog-featured-thumb mb-xs-30 mb-sm-30 mb-md-35 mb-lg-40 mb-40">
+                    <div class="course-item course-standard course-post-details">
+                        <div class="course-featured-thumb mb-xs-30 mb-sm-30 mb-md-35 mb-lg-40 mb-40">
                             <div class="media overflow-hidden">
-                                <img src="{{ url('') }}/assets/img/blog/{{ $blog->avatar }}" class="img-fluid"
+                                <img src="{{ url('') }}/assets/img/thumbnails/{{ $course->thumbnail }}" class="img-fluid"
                                     alt="">
 
                             </div>
@@ -15,17 +15,14 @@
                         <div
                             class="content pr-sm-25 pr-xs-15 pl-xs-15 pl-sm-25 pr-xs-15 pr-30 pl-30 pb-xs-25 pb-sm-30 pb-40">
                             <div class="post-meta mb-10">
-                                <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"><i class="icon-user"></i>Tác giả
-                                    :
-                                    {{ $blog->User->name }} </a>
-                                {{-- <a href="{{ route('blog.show',['slug'=>$blog->slug])}}"><i class="icon-category"></i>Business, Consulting</a> --}}
-                                <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"><i
-                                        class="fal fa-clock"></i>{{ $blog->created_at->translatedFormat('l, d F Y') }}
+                                {{-- <a href="{{ route('course.show',['slug'=>$course->slug])}}"><i class="icon-category"></i>Business, Consulting</a> --}}
+                                <a href="{{ route('course.show', ['slug' => $course->slug]) }}"><i
+                                        class="fal fa-clock"></i>{{ $course->created_at->translatedFormat('l, d F Y') }}
                                 </a>
-                                {{-- <a href="{{ route('blog.show',['slug'=>$blog->slug])}}"><img src="assets/img/icon/messages-1.svg" alt="">02 Comments</a> --}}
+                                {{-- <a href="{{ route('course.show',['slug'=>$course->slug])}}"><img src="assets/img/icon/messages-1.svg" alt="">02 Comments</a> --}}
                             </div>
-                            <h3>{{ $blog->title }}</h3>
-                            <span> {!! htmlspecialchars_decode($blog->content) !!}</span>
+                            <h3>{{ $course->title }}</h3>
+                            <span> {!! htmlspecialchars_decode($course->content) !!}</span>
                             <div
                                 class="tag-share_wrapper d-flex align-center justify-content-between flex-wrap mb-sm-40 mb-xs-30 mb-60">
                                 <div class="tags">
@@ -53,7 +50,7 @@
                             <ul class="comments-item-list">
                                 <li>
                                     <div class="author-img">
-                                        <img src="assets/img/blog-details/auhor-1.jpg" alt="">
+                                        <img src="assets/img/course-details/auhor-1.jpg" alt="">
                                     </div>
 
                                     <div class="author-info-comment">
@@ -72,7 +69,7 @@
 
                                 <li>
                                     <div class="author-img">
-                                        <img src="assets/img/blog-details/auhor-2.jpg" alt="">
+                                        <img src="assets/img/course-details/auhor-2.jpg" alt="">
                                     </div>
 
                                     <div class="author-info-comment">
@@ -131,50 +128,31 @@
                     </div> --}}
 
                     <div class="single-sidebar-widget mb-40 pt-30 pr-30 pb-40 pl-30 pl-xs-20 pr-xs-20">
-                        <h4 class="wid-title mb-30 mb-xs-20 color-d_black text-capitalize">Tin tức gần đây</h4>
+                        <h4 class="wid-title mb-30 mb-xs-20 color-d_black text-capitalize">Các khoá học khác</h4>
                         <div class="resent-posts">
-                            @foreach ($recentBlogs as $recentBlog)
+                            @foreach ($courses->random(3) as $course)
                                 <div class="single-post-item mb-20">
                                     <div class="thumb overflow-hidden">
-                                        <img src="{{ url('') }}/assets/img/blog/{{ $recentBlog->avatar }}"
+                                        <img src="{{ url('') }}/assets/img/thumbnails/{{ $course->thumbnail }}"
                                             class="img-fluid" alt="">
                                     </div>
 
                                     <div class="post-content">
-                                        <a href="{{ route('blog.show', ['slug' => $recentBlog->slug]) }}"
+                                        <a href="{{ route('course.show', ['slug' => $course->slug]) }}"
                                             class="post-date d-block mb-10 text-uppercase">
                                             <i
-                                                class="far fa-clock"></i>{{ $blog->created_at->translatedFormat('l, d F Y') }}
+                                                class="far fa-clock"></i>{{ $course->created_at->translatedFormat('l, d F Y') }}
                                         </a>
                                         <h6><a
-                                                href="{{ route('blog.show', ['slug' => $recentBlog->slug]) }}">{{ $recentBlog->title }}</a>
+                                                href="{{ route('course.show', ['slug' => $course->slug]) }}">{{ $course->title }}</a>
                                         </h6>
                                     </div>
                                 </div>
                             @endforeach
 
-                            <a href="{{ route('blog.index') }}" class="theme-btn d-block"><i
-                                    class="far fa-sync-alt"></i>Tìm hiểu thêm</a>
+                            <a href="{{route('course.index')}}" class="theme-btn d-block"><i class="far fa-sync-alt"></i>Tìm hiểu thêm</a>
                         </div>
                     </div>
-
-                    {{-- <div class="single-sidebar-widget widget__tags mb-40 pt-30 pr-30 pb-40 pl-30 pl-xs-20 pr-xs-20">
-                        <h4 class="wid-title mb-30 mb-xs-20 color-d_black text-capitalize">Popular Tags</h4>
-
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Finance</a></li>
-                                <li><a href="#">Solution</a></li>
-                                <li><a href="#">Research</a></li>
-                                <li><a href="#">Technology</a></li>
-                                <li><a href="#">Growth</a></li>
-                                <li><a href="#">Strategy</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Planning</a></li>
-                            </ul>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
