@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Service\CourseService;
-use Illuminate\Http\Request;
+use App\Http\Requests\CourseRequest;
+
 
 class CourseController extends Controller
 {
@@ -14,8 +15,7 @@ class CourseController extends Controller
     }
     public function index()
     {
-        $courses = $this->courseService->index();
-        return view('admin.course.index',compact('courses'));
+        return $this->courseService->index();
 
     }
 
@@ -30,7 +30,7 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CourseRequest $request)
     {
         return $this->courseService->store($request);
     }
@@ -46,7 +46,7 @@ class CourseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(CourseRequest $request, $id)
     {
         return $this->courseService->update($request, $id);
     }
