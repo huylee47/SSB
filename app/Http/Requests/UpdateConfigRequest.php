@@ -22,15 +22,15 @@ class UpdateConfigRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "id"=>["required","numeric"],
+            "id"=>["required","digits:20"],
             "title"=>["required","max:255"],
             "description"=>["required","max:255"],
-            "facebook"=>["required","url"],
-            "logo"=>[""],
-            "favicon"=>[""],
-            "hotline"=>["required"],
-            "email"=>["required","email"],
-            "address"=>["required"],
+            "facebook"=>["required","url","max:255"],
+            "logo"=>["max:255"],
+            "favicon"=>["max:255"],
+            "hotline"=>["max:255"],
+            "email"=>["required","email","max:255"],
+            "address"=>["required","max:255"],
             "map"=>["required"],
         ];
     }
