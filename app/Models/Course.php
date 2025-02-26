@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 class Course extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory;
     protected $table = 'courses';
     protected $fillable = ['title', 'description', 'thumbnail', 'content','slug'];
     public static function boot()
