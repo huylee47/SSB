@@ -22,7 +22,7 @@ class UpdateConfigRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "id"=>["required","digits:20"],
+            "id"=>["required", "digits_between:1,20"],
             "title"=>["required","max:255"],
             "description"=>["required","max:255"],
             "facebook"=>["required","url","max:255"],
